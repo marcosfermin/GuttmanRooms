@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication2.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+</head>
+
+<body style="background-color:blue;">
+    <div style="background-color: #005DAA; width: 100%; height: 80px; padding-top: 10px;
+        padding-left: 10px; padding-bottom: 10px">
+        <img class="img-responsive" src="img/guttman_logo_leftbar_top.png" alt="Guttman Logo">
+    </div>
+
+
+    <form id="form1" runat="server">
+
+
+
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            
+            
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
