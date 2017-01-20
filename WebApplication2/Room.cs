@@ -13,37 +13,37 @@ namespace WebApplication2
         private int _status;
         private Boolean _occupied;
 
-// In this section, we define the getchers for our project:
+        //// in this section, we define the getchers for our project:
 
-        //Get Room Number publicly:
-        public string RoomNumber
-        {
-            get
-            {
-                return _roomNumber;
-            }
-        }
+        ////get room number publicly:
+        //public string roomnumber
+        //{
+        //    get
+        //    {
+        //        return _roomnumber;
+        //    }
+        //}
 
-        //Get Room Capacity publicly:
-        public int RoomCapacity
-        {
-            get
-            {
-                return _roomCapacity;
-            }
-        }
+        ////get room capacity publicly:
+        //public int roomcapacity
+        //{
+        //    get
+        //    {
+        //        return _roomcapacity;
+        //    }
+        //}
 
-        //Get Room Status publicly:
-        public int Status
-        {
-            get
-            {
-                return _status;
-            }
-        }
+        ////get room status publicly:
+        //public int status
+        //{
+        //    get
+        //    {
+        //        return _status;
+        //    }
+        //}
 
-//Now, in this section we will define the constructor and the proper functions needed to return the proper functions.
- 
+        //Now, in this section we will define the constructor and the proper functions needed to return the proper functions.
+
         //Constructor:
         public Room (int RoomID)
         {
