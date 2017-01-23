@@ -47,7 +47,7 @@
                     room number
                 </headertemplate>
                 <itemtemplate>
-                    <asp:label text='<%# //Display room number %>' runat="server" />
+                    <asp:label text='<%#  %>' runat="server" />
                 </itemtemplate>
             </asp:templatefield>
             <asp:templatefield>
@@ -55,7 +55,7 @@
                     room status
                 </headertemplate>
                 <itemtemplate>
-                    <asp:label text='<%# //Display room status  %>' runat="server" />
+                    <asp:label text='<%#  %>' runat="server" />
                 </itemtemplate>
             </asp:templatefield>
         </columns>
