@@ -27,13 +27,13 @@ namespace WebApplication2
             //gvone.DataSource = l;
             //gvone.DataBind();
 
-            List<Room>  = new List<Room>();
+            //list<room>  = new list<room>();
 
-            Room.Add(new Room(1));
-            Room.Add(new Room(2));
+            //room.add(new room(1));
+            //room.add(new room(2));
 
-            gvone.DataSource = Room;
-            gvone.DataBind();
+            //gvone.datasource = room;
+            //gvone.databind();
         }
     }    
      

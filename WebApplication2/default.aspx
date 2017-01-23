@@ -15,8 +15,10 @@
         }
     </style>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <center><h1 class="auto-style1">Guttman Rooms</h1></center>
+<%-- The following HTML table illustrates how things are going to look --%>
     <center><table class="table">
   <thead>
     <tr>
@@ -40,27 +42,31 @@
   </tbody>
 </table>
 </center>
-   <asp:gridview id="gvone" runat="server" cssclass="table table-responsive" autogeneratecolumns="true">
+<%-- End of the HTML table --%>
+
+<%-- This GridView table needs the data source (database source) --%>
+   <asp:gridview id="gvone" runat="server" cssclass="table table-responsive" AutoGenerateColumns="False">
        <columns>
-            <asp:templatefield>
-                <headertemplate>
+            <asp:templatefield HeaderText="Room Number">
+<%--                <headertemplate>
                     room number
-                </headertemplate>
+                </headertemplate>--%>
                 <itemtemplate>
-                    <asp:label text='<%#  %>' runat="server" />
+                   <%-- Here is where the data of room number will appear --%>
+                     <%--<asp:label text='<%#  %>' runat="server" />--%>
                 </itemtemplate>
             </asp:templatefield>
-            <asp:templatefield>
-                <headertemplate>
+            <asp:templatefield HeaderText="Room Status">
+               <%-- <headertemplate>
                     room status
-                </headertemplate>
+                </headertemplate>--%>
                 <itemtemplate>
-                    <asp:label text='<%#  %>' runat="server" />
+                <%-- Here is where the data of room status will appear --%>
+                <%--    <asp:label text='<%#  %>' runat="server" />--%>
                 </itemtemplate>
             </asp:templatefield>
         </columns>
     </asp:GridView>
-
 
 </asp:Content>
 
