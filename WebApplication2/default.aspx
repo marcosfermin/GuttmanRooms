@@ -30,8 +30,8 @@
       <td class="auto-style3">Occupied</td>
     </tr>
       <tr>
-      <th scope="row">509A</th>
-      <td>Reserved</td>
+      <th scope="row" class="auto-style4">509A</th>
+      <td class="auto-style4">Reserved</td>
     </tr>
       <tr>
       <th scope="row" class="auto-style4">509B</th>
