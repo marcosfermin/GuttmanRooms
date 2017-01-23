@@ -1,17 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="login.aspx.cs"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-  
+    <link rel="stylesheet" type="text/css" href="login/style.css"> <%--CSS stylesheet for the login form only--%>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-<link rel="stylesheet" type="text/css" href="login/style.css">
-<link href="Content/bootstrap.css" rel="stylesheet" />
-<script type="text/javascript" src="login/js.js"></script>
 <div class="login-page">
-    <div class="container-fluid"> <%-- Bootstrap container class--%>
+    <div class="container-fluid"> <%-- Bootstrap container class that makes the login form responsive--%>
   <div class="form">
-       <%--Just in case you want to register  --%>
-       <%--<form class="register-form">
+
+     <%--  <form class="register-form">
       <input type="text" placeholder="name"/>
       <input type="password" placeholder="password"/>
       <input type="text" placeholder="email address"/>
@@ -20,13 +16,13 @@
     </form>--%>
 
     <form class="login-form">
-      <input type="text" placeholder="username"/>
-      <input type="password" placeholder="password"/>
+      <input type="text" placeholder="Username"/>
+      <input type="password" placeholder="Password"/>
       <button>login</button>
-      <p class="message">Forgot Username/Password? <a href="#">Click here</a></p>
+      <p class="message"><a href="#">Forgot Username/Password?</a></p>
     </form>
+
   </div>
  </div>
 </div>
-
 </asp:Content>
