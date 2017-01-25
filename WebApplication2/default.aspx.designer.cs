@@ -13,12 +13,12 @@ namespace WebApplication2 {
     public partial class _default {
         
         /// <summary>
-        /// gvone control.
+        /// gvtwo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvone;
+        protected global::System.Web.UI.WebControls.GridView gvtwo;
     }
 }

@@ -13,31 +13,29 @@ namespace WebApplication2
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            //Room r1 = new Room(1);
-            //Room r2 = new Room(2);
-            //Room r3 = new Room(3);
+            QMRServiceReference.RoomsClient client = new QMRServiceReference.RoomsClient();
+            client.ClientCredentials.UserName.UserName = "ITIT";
+            client.ClientCredentials.UserName.Password = "ITIT2017";
 
+            gvtwo.DataSource = client.GetListRooms();
+            gvtwo.DataBind();
 
-            //List<string> l = new List<string>();
-
-            //l.Add("1");
-            //l.Add("Room 2016");
-
-
-            //gvone.DataSource = l;
+            //gvone.DataSource = client.GetListRooms();
             //gvone.DataBind();
 
-            //list<room>  = new list<room>();
+            // var rms = client.GetListRooms();
+            //        var rmbySensorID = client.GetRoomBySensorID(1);
+            //        var rmbyRoomID = client.GetRoomByRoomID;
 
-            //room.add(new room(1));
-            //room.add(new room(2));
-
-            //gvone.datasource = room;
-            //gvone.databind();
+            // foreach (var room in rms)
+            //{
+            //    Label.Text = Label.Text + " " + room.RoomName;
+            //    string name = room.RoomName;
+            //    int roomid = room.RoomID;
+            //    bool occupied = room.Occupied;
+            //client.Close();
+           
         }
-    }    
-     
 
-            
-    
+    }
 }

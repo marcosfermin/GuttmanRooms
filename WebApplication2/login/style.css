@@ -1,9 +1,16 @@
+/*
+@author: Marcos Fermin
+@title: Loging page CSS Stylesheet
+This is the CSS Stylesheet of the Login front-end (Login.aspx)   
+*/
+
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 .login-page {
   width: 360px;
   padding: 8% 0 0;
-  margin: auto;
+  margin: 0px auto auto auto;
+    height: 405px;
 }
 .form {
   position: relative;
@@ -41,7 +48,7 @@
   cursor: pointer;
 }
 .form button:hover,.form button:active,.form button:focus {
-  background: #005DAA;
+  background: #FF6A00;  /* Button turns ORANGE when you place cursor */
 }
 .form .message {
   margin: 15px 0 0;

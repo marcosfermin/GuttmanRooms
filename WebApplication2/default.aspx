@@ -17,52 +17,40 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <center><h1 class="auto-style1">Guttman Rooms</h1></center>
-<%-- The following HTML table illustrates how things are going to look --%>
-    <center><table class="table">
-  <thead>
-    <tr>
-      <th class="auto-style2">Room Number</th>
-      <th class="auto-style2">Room Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row" class="auto-style3">509</th>
-      <td class="auto-style3">Occupied</td>
-    </tr>
-      <tr>
-      <th scope="row" class="auto-style4">509A</th>
-      <td class="auto-style4">Reserved</td>
-    </tr>
-      <tr>
-      <th scope="row" class="auto-style4">509B</th>
-      <td class="auto-style4">Available</td>
-    </tr>
-  </tbody>
-</table>
-</center>
-<%-- End of the HTML table --%>
 
-<%-- This GridView table needs the data source (database source) --%>
-   <asp:gridview id="gvone" runat="server" cssclass="table table-responsive" AutoGenerateColumns="False">
+    <center><h1 class="auto-style1">Guttman Rooms</h1></center>
+
+    <%-- GridView of the Data --%>
+   <asp:GridView id="gvtwo" runat="server" cssclass="table table-responsive" AutoGenerateColumns="False" OnRowDataBound="gvtwo_RowDataBound" OnSelectedIndexChanged="gvtwo_SelectedIndexChanged">
        <columns>
             <asp:templatefield HeaderText="Room Number">
-<%--                <headertemplate>
-                    room number
-                </headertemplate>--%>
+                <headertemplate>
+                    Room Number
+                </headertemplate>
                 <itemtemplate>
                    <%-- Here is where the data of room number will appear --%>
-                     <%--<asp:label text='<%#  %>' runat="server" />--%>
+                     <asp:label text='<%# Eval("RoomName") %>' runat="server" />
                 </itemtemplate>
             </asp:templatefield>
             <asp:templatefield HeaderText="Room Status">
-               <%-- <headertemplate>
-                    room status
-                </headertemplate>--%>
+                <headertemplate>
+                    Room Status
+                </headertemplate>
                 <itemtemplate>
                 <%-- Here is where the data of room status will appear --%>
-                <%--    <asp:label text='<%#  %>' runat="server" />--%>
+                    <asp:label text='<%# (Boolean.Parse(Eval("Occupied").ToString())) ? "Occupied" : "Available" %>' runat="server" />
+                </itemtemplate>
+            </asp:templatefield>
+           <asp:templatefield HeaderText="Reserve">
+                <headertemplate>
+                    Reserve
+                </headertemplate>
+                <itemtemplate>
+                <%-- Here is where the data of the room reservation will appear --%>
+
+                <%--  <asp:label text='<%# Eval("Occupied") %>' runat="server" />--%>
+
+                <asp:Button ID="ReserveButton" runat="server" Text="Reserve" />
                 </itemtemplate>
             </asp:templatefield>
         </columns>
