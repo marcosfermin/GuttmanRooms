@@ -21,7 +21,7 @@
     <center><h1 class="auto-style1">Guttman Rooms</h1></center>
 
     <%-- GridView of the Data --%>
-   <asp:GridView id="gvtwo" runat="server" cssclass="table table-responsive" AutoGenerateColumns="False" OnRowDataBound="gvtwo_RowDataBound" OnSelectedIndexChanged="gvtwo_SelectedIndexChanged">
+   <asp:GridView id="gvtwo" runat="server" cssclass="table table-responsive" AutoGenerateColumns="False">
        <columns>
             <asp:templatefield HeaderText="Room Number">
                 <headertemplate>
