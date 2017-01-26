@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Login.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WebApplication2.Login1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" type="text/css" href="login/style.css"> <%--CSS stylesheet for the login form only--%>
+    <link rel="stylesheet" type="text/css" href="login/style.css" /> <%--CSS stylesheet for the login form only--%>
     <style type="text/css">
         .img-responsive {
             text-align: center;

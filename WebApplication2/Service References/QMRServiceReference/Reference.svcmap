@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="06b4288d-d8f9-40e6-8e6d-e49ea520bc40" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="934b95c8-f6ef-4f0b-ae54-240ee0db5763" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="https://qmr.guttman.cuny.edu/qmr/Rooms.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://qmr.guttman.cuny.edu/qmr/service.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Rooms.wsdl" MetadataType="Wsdl" ID="fa03e398-9814-459e-8813-28723883fc1b" SourceId="1" SourceUrl="https://qmr.guttman.cuny.edu/qmr/Rooms.svc?wsdl" />
-    <MetadataFile FileName="Rooms.xsd" MetadataType="Schema" ID="8e77ac33-4299-40a6-9959-f9fddd6f4365" SourceId="1" SourceUrl="https://qmr.guttman.cuny.edu/qmr/Rooms.svc?xsd=xsd2" />
-    <MetadataFile FileName="Rooms.disco" MetadataType="Disco" ID="ee3c070d-aeb1-4736-b719-dc8d5062b643" SourceId="1" SourceUrl="https://qmr.guttman.cuny.edu/qmr/Rooms.svc?disco" />
-    <MetadataFile FileName="Rooms1.xsd" MetadataType="Schema" ID="67d1307b-582e-4f1b-8d4a-b4d758efa991" SourceId="1" SourceUrl="https://qmr.guttman.cuny.edu/qmr/Rooms.svc?xsd=xsd1" />
-    <MetadataFile FileName="Rooms2.xsd" MetadataType="Schema" ID="21d602b3-7192-45cf-920d-f9bc30bf87ee" SourceId="1" SourceUrl="https://qmr.guttman.cuny.edu/qmr/Rooms.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="79c3d53a-0d64-4fc6-aa78-b47d43a3435e" SourceId="1" SourceUrl="https://qmr.guttman.cuny.edu/qmr/Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="e3df07bf-04b0-405f-9960-53e305e58990" SourceId="1" SourceUrl="https://qmr.guttman.cuny.edu/qmr/Service.svc?wsdl" />
+    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="77ef6227-0712-4d13-afe7-fdde3ff3bdff" SourceId="1" SourceUrl="https://qmr.guttman.cuny.edu/qmr/Service.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service2.xsd" MetadataType="Schema" ID="9461b557-39d0-4315-91d2-088f14ff8225" SourceId="1" SourceUrl="https://qmr.guttman.cuny.edu/qmr/Service.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service.disco" MetadataType="Disco" ID="9b3e5fae-ba86-4966-9e61-bb66811eda72" SourceId="1" SourceUrl="https://qmr.guttman.cuny.edu/qmr/Service.svc?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

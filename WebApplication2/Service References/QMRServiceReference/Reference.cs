@@ -113,10 +113,22 @@ namespace WebApplication2.QMRServiceReference {
         System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.Room[]> GetListRoomsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRooms/AddRoom", ReplyAction="http://tempuri.org/IRooms/AddRoomResponse")]
-        void AddRoom(WebApplication2.QMRServiceReference.Room room);
+        void AddRoom(string roomName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRooms/AddRoom", ReplyAction="http://tempuri.org/IRooms/AddRoomResponse")]
-        System.Threading.Tasks.Task AddRoomAsync(WebApplication2.QMRServiceReference.Room room);
+        System.Threading.Tasks.Task AddRoomAsync(string roomName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRooms/ReserveRoom", ReplyAction="http://tempuri.org/IRooms/ReserveRoomResponse")]
+        void ReserveRoom(int roomID, bool occupied);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRooms/ReserveRoom", ReplyAction="http://tempuri.org/IRooms/ReserveRoomResponse")]
+        System.Threading.Tasks.Task ReserveRoomAsync(int roomID, bool occupied);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRooms/Login", ReplyAction="http://tempuri.org/IRooms/LoginResponse")]
+        string Login(string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRooms/Login", ReplyAction="http://tempuri.org/IRooms/LoginResponse")]
+        System.Threading.Tasks.Task<string> LoginAsync(string username, string password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -170,12 +182,89 @@ namespace WebApplication2.QMRServiceReference {
             return base.Channel.GetListRoomsAsync();
         }
         
-        public void AddRoom(WebApplication2.QMRServiceReference.Room room) {
-            base.Channel.AddRoom(room);
+        public void AddRoom(string roomName) {
+            base.Channel.AddRoom(roomName);
         }
         
-        public System.Threading.Tasks.Task AddRoomAsync(WebApplication2.QMRServiceReference.Room room) {
-            return base.Channel.AddRoomAsync(room);
+        public System.Threading.Tasks.Task AddRoomAsync(string roomName) {
+            return base.Channel.AddRoomAsync(roomName);
+        }
+        
+        public void ReserveRoom(int roomID, bool occupied) {
+            base.Channel.ReserveRoom(roomID, occupied);
+        }
+        
+        public System.Threading.Tasks.Task ReserveRoomAsync(int roomID, bool occupied) {
+            return base.Channel.ReserveRoomAsync(roomID, occupied);
+        }
+        
+        public string Login(string username, string password) {
+            return base.Channel.Login(username, password);
+        }
+        
+        public System.Threading.Tasks.Task<string> LoginAsync(string username, string password) {
+            return base.Channel.LoginAsync(username, password);
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="QMRServiceReference.ISensors")]
+    public interface ISensors {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISensors/AddSensor", ReplyAction="http://tempuri.org/ISensors/AddSensorResponse")]
+        void AddSensor(int roomID, string ipaddr);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISensors/AddSensor", ReplyAction="http://tempuri.org/ISensors/AddSensorResponse")]
+        System.Threading.Tasks.Task AddSensorAsync(int roomID, string ipaddr);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISensors/ReserveRoomBySensor", ReplyAction="http://tempuri.org/ISensors/ReserveRoomBySensorResponse")]
+        void ReserveRoomBySensor(int sensorID, int roomID, bool occupied);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISensors/ReserveRoomBySensor", ReplyAction="http://tempuri.org/ISensors/ReserveRoomBySensorResponse")]
+        System.Threading.Tasks.Task ReserveRoomBySensorAsync(int sensorID, int roomID, bool occupied);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface ISensorsChannel : WebApplication2.QMRServiceReference.ISensors, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class SensorsClient : System.ServiceModel.ClientBase<WebApplication2.QMRServiceReference.ISensors>, WebApplication2.QMRServiceReference.ISensors {
+        
+        public SensorsClient() {
+        }
+        
+        public SensorsClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public SensorsClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public SensorsClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public SensorsClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        public void AddSensor(int roomID, string ipaddr) {
+            base.Channel.AddSensor(roomID, ipaddr);
+        }
+        
+        public System.Threading.Tasks.Task AddSensorAsync(int roomID, string ipaddr) {
+            return base.Channel.AddSensorAsync(roomID, ipaddr);
+        }
+        
+        public void ReserveRoomBySensor(int sensorID, int roomID, bool occupied) {
+            base.Channel.ReserveRoomBySensor(sensorID, roomID, occupied);
+        }
+        
+        public System.Threading.Tasks.Task ReserveRoomBySensorAsync(int sensorID, int roomID, bool occupied) {
+            return base.Channel.ReserveRoomBySensorAsync(sensorID, roomID, occupied);
         }
     }
 }

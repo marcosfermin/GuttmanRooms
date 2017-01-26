@@ -49,8 +49,7 @@
                 <%-- Here is where the data of the room reservation will appear --%>
 
                 <%--  <asp:label text='<%# Eval("Occupied") %>' runat="server" />--%>
-
-                <asp:Button ID="ReserveButton" runat="server" Text="Reserve" />
+              <asp:Button ID="ReserveButton" runat="server" Text="Reserve" />
                 </itemtemplate>
             </asp:templatefield>
         </columns>
