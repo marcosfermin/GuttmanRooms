@@ -21,7 +21,7 @@
     <center><h1 class="auto-style1">Guttman Rooms</h1></center>
 
     <%-- GridView of the Data --%>
-   <asp:GridView id="gvtwo" runat="server" cssclass="table table-responsive" AutoGenerateColumns="False">
+   <asp:GridView id="gvtwo" runat="server" cssclass="table table-responsive" AutoGenerateColumns="False" OnRowDataBound="gvtwo_RowDataBound" OnSelectedIndexChanged="gvtwo_SelectedIndexChanged">
        <columns>
             <asp:templatefield HeaderText="Room Number">
                 <headertemplate>
@@ -38,7 +38,7 @@
                 </headertemplate>
                 <itemtemplate>
                 <%-- Here is where the data of room status will appear --%>
-                    <asp:label text='<%# (Boolean.Parse(Eval("Occupied").ToString())) ? "Occupied" : "Available" %>' runat="server" />
+                 <asp:label text='<%# (Boolean.Parse(Eval("Occupied").ToString())) ? "Occupied" : "Available" %>' runat="server" />
                 </itemtemplate>
             </asp:templatefield>
            <asp:templatefield HeaderText="Reserve">
@@ -49,7 +49,8 @@
                 <%-- Here is where the data of the room reservation will appear --%>
 
                 <%--  <asp:label text='<%# Eval("Occupied") %>' runat="server" />--%>
-              <asp:Button ID="ReserveButton" runat="server" Text="Reserve" />
+                <asp:Button ID="ReserveButton" runat="server" Text="Reserve" />
+
                 </itemtemplate>
             </asp:templatefield>
         </columns>

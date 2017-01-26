@@ -36,6 +36,18 @@ namespace WebApplication2
             //client.Close();
            
         }
+        
 
+        protected void gvtwo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+        protected void gvtwo_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            // Write the Properties for the button inside of the GridView
+
+      
+        }
     }
 }

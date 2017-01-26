@@ -17,9 +17,9 @@
 </center>
   <div class="form">
     <form class="login-form">
-      <input type="text" placeholder="Username"/>
-      <input type="password" placeholder="Password"/>
-      <button>login</button>
+      <input type="text" placeholder="Username" id="username" runat="server"/>
+      <input type="password" placeholder="Password" id="password" runat="server"/>
+        <asp:Button Text="LOGIN" runat="server" id="loginbutton" OnClick="loginbutton_Click"/>
       <p class="message"><a href="#">Forgot Username/Password?</a></p>
     </form>
   </div>
