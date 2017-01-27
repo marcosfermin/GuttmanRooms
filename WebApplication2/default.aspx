@@ -38,6 +38,7 @@
                 </headertemplate>
                 <itemtemplate>
                 <%-- Here is where the data of room status will appear --%>
+                <%-- The ternary operator translates the boolean responses from True/False to Occupied/Available --%>
                  <asp:label text='<%# (Boolean.Parse(Eval("Occupied").ToString())) ? "Occupied" : "Available" %>' runat="server" />
                 </itemtemplate>
             </asp:templatefield>
@@ -47,14 +48,14 @@
                 </headertemplate>
                 <itemtemplate>
                 <%-- Here is where the data of the room reservation will appear --%>
-
-                <%--  <asp:label text='<%# Eval("Occupied") %>' runat="server" />--%>
-                <asp:Button ID="ReserveButton" runat="server" Text="Reserve" />
-
+                <%-- If the boolean value "Occupied" is false (Meaning that the Room is available), the ReserveButton will appear --%>
+                <asp:Button ID="ReserveButton" runat="server" Text="Reserve" Visible='<%# !(bool)(Eval("Occupied")) %>' />
                 </itemtemplate>
             </asp:templatefield>
         </columns>
     </asp:GridView>
 
 </asp:Content>
+
+
 
