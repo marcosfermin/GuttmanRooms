@@ -12,13 +12,13 @@
     <div class="login-page">  
     <div class="container-fluid"> 
         <center>  
-     <img class="img-responsive" src="img/guttman_logo_leftbar_top.png" alt="Guttman Logo"/>
+            <img class="img-responsive" src="img/guttman_logo_leftbar_top.png" alt="Guttman Logo"/>
      <p></p>
 </center>
   <div class="form">
     <div class="login-form">
         <asp:TextBox ID="txtUsername" placeholder="Username" runat="server"  />
-        <asp:TextBox ID="txtPassword" placeholder="Password" runat="server"  />
+        <asp:TextBox ID="txtPassword" placeholder="Password" runat="server"  TextMode="Password" />
       <%--<input type="password" placeholder="Password" id="password" runat="server"/>--%>
         <asp:Button Text="LOGIN" runat="server" id="loginbutton" OnClick="loginbutton_Click" />
       <p class="message"><a href="#">Forgot Username/Password?</a></p>
