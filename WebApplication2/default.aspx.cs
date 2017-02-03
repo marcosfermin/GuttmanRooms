@@ -40,7 +40,7 @@ namespace WebApplication2
 
         protected void gvtwo_SelectedIndexChanged(object sender, EventArgs e)
         {
-          
+           
         }
 
         protected void gvtwo_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -50,5 +50,35 @@ namespace WebApplication2
       
         }
 
+        //=====================================================
+        //<EN>
+        // This section can be found at: 
+        // https://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.datagrid.itemcommand(v=vs.110).aspx
+        //======================================================
+
+        protected void ItemsGrid_Command(Object sender, DataGridCommandEventArgs e)
+        {
+
+            switch (((LinkButton)e.CommandSource).CommandName)
+            {
+
+                case "Delete":
+                    DeleteItem(e);  //This DeleteItem still does not exist. 
+                    break;
+
+                // Add other cases here, if there are multiple ButtonColumns in 
+                // the DataGrid control.
+
+                default:
+                    // Do nothing.
+                    break;
+
+            }
+
+        }
+
+     //---------------------------------------------------------
+     //</EN> End of Section...
+    //----------------------------------------------------------
     }
 }
