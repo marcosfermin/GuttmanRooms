@@ -50,10 +50,10 @@ namespace WebApplication2
       
         }
 
-        //=====================================================
-        //<EN>
-        // This section can be found at: 
-        // https://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.datagrid.itemcommand(v=vs.110).aspx
+            //==================================================
+           //<EN>
+          // This section can be found at: 
+         // https://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.datagrid.itemcommand(v=vs.110).aspx
         //======================================================
 
         protected void ItemsGrid_Command(Object sender, DataGridCommandEventArgs e)
@@ -77,7 +77,7 @@ namespace WebApplication2
 
         }
 
-     //---------------------------------------------------------
+      //--------------------------------------------------------
      //</EN> End of Section...
     //----------------------------------------------------------
     }
