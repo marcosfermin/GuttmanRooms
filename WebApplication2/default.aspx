@@ -48,8 +48,9 @@
                 </headertemplate>
                 <itemtemplate>
                 <%-- Here is where the data of the room reservation will appear --%>
-                <%-- If the boolean value "Occupied" is false (Meaning that the Room is available), the ReserveButton will appear --%>
-                <asp:Button ID="ReserveButton" runat="server" Text="Reserve" Visible='<%# !(bool)(Eval("Occupied")) %>' />
+                <%-- If the boolean value "Occupied" is false (Meaning that the Room is available), the ReserveButton will appear // use eval in the way to wirte to windows service --%>
+                   
+                <asp:Button ID="ReserveButton" runat="server" Text="Reserve" CommandName="Reserve"  CommandArgument="Reserve" Visible='<%# !(bool)(Eval("Occupied")) %>' />
                 </itemtemplate>
             </asp:templatefield>
         </columns>
