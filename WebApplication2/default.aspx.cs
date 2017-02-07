@@ -12,14 +12,15 @@ namespace WebApplication2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                QMRServiceReference.RoomsClient client = new QMRServiceReference.RoomsClient();
+                client.ClientCredentials.UserName.UserName = "ITIT";
+                client.ClientCredentials.UserName.Password = "ITIT2017";
 
-            QMRServiceReference.RoomsClient client = new QMRServiceReference.RoomsClient();
-            client.ClientCredentials.UserName.UserName = "ITIT";
-            client.ClientCredentials.UserName.Password = "ITIT2017";
-
-            gvtwo.DataSource = client.GetListRooms();
-            gvtwo.DataBind();
-
+                gvtwo.DataSource = client.GetListRooms();
+                gvtwo.DataBind();
+            }
             //gvone.DataSource = client.GetListRooms();
             //gvone.DataBind();
 
@@ -38,11 +39,6 @@ namespace WebApplication2
         }
         
 
-        protected void gvtwo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-
         protected void gvtwo_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             // Write the Properties for the button inside of the GridView
@@ -56,14 +52,24 @@ namespace WebApplication2
          // https://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.datagrid.itemcommand(v=vs.110).aspx
         //======================================================
 
-        protected void ItemsGrid_Command(Object sender, DataGridCommandEventArgs e)
+        protected void gvtwo_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-
-            switch (((LinkButton)e.CommandSource).CommandName)
+            switch (((Button)e.CommandSource).CommandName)
             {
 
-                case "Delete":
-                    DeleteItem(e);  //This DeleteItem still does not exist. 
+                case "Reserve":
+                    // DeleteItem(e);  //This DeleteItem still does not exist. 
+                    String s = e.CommandArgument.ToString();
+                    int RoomID = -1;
+                    if (!int.TryParse(s, out RoomID))
+                    {
+
+                        //There was an error with the data coming from the webservice.
+                    }
+
+                    //Call Webservice's method to reserve the room.
+
+                    Label1.Text = RoomID.ToString();
                     break;
 
                 // Add other cases here, if there are multiple ButtonColumns in 
@@ -77,8 +83,9 @@ namespace WebApplication2
 
         }
 
-      //--------------------------------------------------------
-     //</EN> End of Section...
-    //----------------------------------------------------------
+
+        //--------------------------------------------------------
+        //</EN> End of Section...
+        //----------------------------------------------------------
     }
 }

@@ -21,7 +21,8 @@
     <center><h1 class="auto-style1">Guttman Rooms</h1></center>
 
     <%-- GridView of the Data --%>
-   <asp:GridView id="gvtwo" runat="server" cssclass="table table-responsive" AutoGenerateColumns="False" OnRowDataBound="gvtwo_RowDataBound" OnSelectedIndexChanged="gvtwo_SelectedIndexChanged">
+   <asp:GridView id="gvtwo" runat="server" cssclass="table table-responsive" AutoGenerateColumns="False" 
+        OnRowCommand="gvtwo_RowCommand">
        <columns>
             <asp:templatefield HeaderText="Room Number">
                 <headertemplate>
@@ -48,13 +49,14 @@
                 </headertemplate>
                 <itemtemplate>
                 <%-- Here is where the data of the room reservation will appear --%>
-                <%-- If the boolean value "Occupied" is false (Meaning that the Room is available), the ReserveButton will appear // use eval in the way to wirte to windows service --%>
-                   
-                <asp:Button ID="ReserveButton" runat="server" Text="Reserve" CommandName="Reserve"  CommandArgument="Reserve" Visible='<%# !(bool)(Eval("Occupied")) %>' />
+                <%-- If the boolean value "Occupied" is false (Meaning that the Room is available), the ReserveButton will appear --%>
+                <asp:Button ID="ReserveButton" runat="server" Text="Reserve" CommandName="Reserve" CommandArgument='<%# Eval("RoomID") %>' Visible='<%# !(bool)(Eval("Occupied")) %>' />
                 </itemtemplate>
             </asp:templatefield>
         </columns>
     </asp:GridView>
+
+    <asp:Label ID="Label1" runat="server"></asp:Label>
 
 </asp:Content>
 
