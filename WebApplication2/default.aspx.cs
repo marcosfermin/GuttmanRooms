@@ -10,6 +10,7 @@ namespace WebApplication2
 {
     public partial class _default : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -18,6 +19,8 @@ namespace WebApplication2
                 client.ClientCredentials.UserName.UserName = "ITIT";
                 client.ClientCredentials.UserName.Password = "ITIT2017";
 
+
+                
                 gvtwo.DataSource = client.GetListRooms();
                 gvtwo.DataBind();
             }
@@ -60,13 +63,18 @@ namespace WebApplication2
                 case "Reserve":
                     // DeleteItem(e);  //This DeleteItem still does not exist. 
                     String s = e.CommandArgument.ToString();
-                    int RoomID = -1;
-                    if (!int.TryParse(s, out RoomID))
-                    {
+                    int RoomID;
+                    int.TryParse(s, out RoomID);
 
-                        //There was an error with the data coming from the webservice.
-                    }
+                    QMRServiceReference.RoomsClient client = new QMRServiceReference.RoomsClient();
+                    client.ClientCredentials.UserName.UserName = "ITIT";
+                    client.ClientCredentials.UserName.Password = "ITIT2017";
 
+                    client.ReserveRoom(RoomID, true);
+                    //There was an error with the data coming from the webservice.
+
+                    gvtwo.DataSource = client.GetListRooms();
+                    gvtwo.DataBind();
                     //Call Webservice's method to reserve the room.
 
                     Label1.Text = RoomID.ToString();

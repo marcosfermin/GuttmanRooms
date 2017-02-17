@@ -14,8 +14,7 @@ namespace WebApplication2
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-        if (!IsPostBack) 
+        } 
         protected void loginbutton_Click(object sender, EventArgs e)
         {
             QMRServiceReference.RoomsClient client = new QMRServiceReference.RoomsClient();
@@ -32,23 +31,6 @@ namespace WebApplication2
             // I need to retrieve the values from the front-end (Login.aspx) Login page
             // 1) Check if values are empty
             // 2) If they are not empty, pass the login values to the "Login" method. 
-            //string loginbutton_Click = Request.Form["login-form"];
-            //if (loginbutton_Click == null)
-            //{
-            //    Response.Write("check your UserName or Password");
-            //}
-            //else
-            //{
-            //    sendform();
-            //}
 
-
-
-
-            
-
-
-
-        }
     }
 }

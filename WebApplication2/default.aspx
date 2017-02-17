@@ -17,7 +17,6 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
     <center><h1 class="auto-style1">Guttman Rooms</h1></center>
 
     <%-- GridView of the Data --%>
