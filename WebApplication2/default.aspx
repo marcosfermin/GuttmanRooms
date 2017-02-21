@@ -52,7 +52,7 @@
                 <asp:Button ID="ReserveButton" runat="server" Text="Reserve" CommandName="Reserve" CommandArgument='<%# Eval("RoomID") %>' Visible='<%# !(bool)(Eval("Occupied")) %>' />
                 </itemtemplate>
             </asp:templatefield>
-            <asp:templatefield HeaderText="Reserve">
+            <asp:templatefield HeaderText="Unreserve">
                 <headertemplate>
                     Unreserve
                 </headertemplate>
