@@ -42,8 +42,6 @@
     <td><input type=text runat=server id=username></td>--%>
   </tr>
 
-
-
   </div>
  </div>
 </div>

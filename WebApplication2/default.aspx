@@ -52,6 +52,17 @@
                 <asp:Button ID="ReserveButton" runat="server" Text="Reserve" CommandName="Reserve" CommandArgument='<%# Eval("RoomID") %>' Visible='<%# !(bool)(Eval("Occupied")) %>' />
                 </itemtemplate>
             </asp:templatefield>
+            <asp:templatefield HeaderText="Reserve">
+                <headertemplate>
+                    Unreserve
+                </headertemplate>
+                <itemtemplate>
+                <%-- Here is where the data of the room UNreservation will appear --%>
+                <%-- If the boolean value "Occupied" is false (Meaning that the Room is available), the UNreserveButton will disappear --%>
+                <asp:Button ID="UnreserveButton" runat="server" Text="Unreserve" CommandName="Unreserve" CommandArgument='<%# Eval("RoomID") %>' Visible='<%# (Eval("Occupied")) %>' />
+                </itemtemplate>
+            </asp:templatefield>
+
         </columns>
     </asp:GridView>
 

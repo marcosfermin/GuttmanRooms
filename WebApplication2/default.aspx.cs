@@ -20,7 +20,7 @@ namespace WebApplication2
                 client.ClientCredentials.UserName.Password = "ITIT2017";
 
 
-                
+
                 gvtwo.DataSource = client.GetListRooms();
                 gvtwo.DataBind();
             }
@@ -38,22 +38,11 @@ namespace WebApplication2
             //    int roomid = room.RoomID;
             //    bool occupied = room.Occupied;
             //client.Close();
-           
-        }
-        
 
-        protected void gvtwo_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
-            // Write the Properties for the button inside of the GridView
-
-      
         }
 
-            //==================================================
-           //<EN>
-          // This section can be found at: 
-         // https://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.datagrid.itemcommand(v=vs.110).aspx
-        //======================================================
+
+      //Functionality to Set Room Reservation
 
         protected void gvtwo_RowCommand(object sender, GridViewCommandEventArgs e)
         {
@@ -61,7 +50,7 @@ namespace WebApplication2
             {
 
                 case "Reserve":
-                    // DeleteItem(e);  //This DeleteItem still does not exist. 
+                   
                     String s = e.CommandArgument.ToString();
                     int RoomID;
                     int.TryParse(s, out RoomID);
@@ -71,29 +60,56 @@ namespace WebApplication2
                     client.ClientCredentials.UserName.Password = "ITIT2017";
 
                     client.ReserveRoom(RoomID, true);
-                    //There was an error with the data coming from the webservice.
+                    
 
                     gvtwo.DataSource = client.GetListRooms();
                     gvtwo.DataBind();
-                    //Call Webservice's method to reserve the room.
+                  
 
                     Label1.Text = RoomID.ToString();
                     break;
 
-                // Add other cases here, if there are multiple ButtonColumns in 
-                // the DataGrid control.
+               
 
                 default:
-                    // Do nothing.
+              
+                    break;
+
+            }
+
+            //Functionality to UNSet Room Reservation
+
+            switch (((Button)e.CommandSource).CommandName)
+            {
+
+                case "Unreserve": 
+                    String s = e.CommandArgument.ToString();
+                    int RoomID;
+                    int.TryParse(s, out RoomID);
+
+                    QMRServiceReference.RoomsClient client = new QMRServiceReference.RoomsClient();
+                    client.ClientCredentials.UserName.UserName = "ITIT";
+                    client.ClientCredentials.UserName.Password = "ITIT2017";
+
+                    client.ReserveRoom(RoomID, false);
+
+                    gvtwo.DataSource = client.GetListRooms();
+                    gvtwo.DataBind();
+                    
+
+                    Label1.Text = RoomID.ToString();
+                    break;
+
+               
+
+                default:
+
                     break;
 
             }
 
         }
 
-
-        //--------------------------------------------------------
-        //</EN> End of Section...
-        //----------------------------------------------------------
+       
     }
 }
