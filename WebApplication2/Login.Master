@@ -9,7 +9,7 @@
         <%--CSS Stylesheet (Bootstrap)--%>
         <link href="Content/bootstrap.css" rel="stylesheet" />
          <%--CSS stylesheet for the login form only--%>
-        <link rel="stylesheet" type="text/css" href="login/style.css">
+        <link rel="stylesheet" type="text/css" href="login/style.css"/>
         <style type="text/css">
             .auto-style1 {
                 color: #005DAA;

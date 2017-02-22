@@ -20,6 +20,7 @@
 <div class="text-right">
         <p>
             <asp:LinkButton ID="LogoutLinkButton" runat="server" OnClick="LogoutLinkButton_Click"><b><img src="img/logout.png" /> Log Out</b></asp:LinkButton>
+        &nbsp;&nbsp;&nbsp;&nbsp;
         </p>
 </div>
     <div>
