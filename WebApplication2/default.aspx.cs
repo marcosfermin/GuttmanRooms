@@ -13,24 +13,20 @@ namespace WebApplication2
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session.IsNewSession)
+            if (Session["user"] == null)
             {
                 Response.Redirect("~/Login.aspx", true);
             }
-
-            if (!IsPostBack)
+            else
             {
-                QMRServiceReference.RoomsClient client = new QMRServiceReference.RoomsClient();
-                client.ClientCredentials.UserName.UserName = "ITIT";
-                client.ClientCredentials.UserName.Password = "ITIT2017";
+                if (!IsPostBack)
+                {
+                    QMRServiceReference.qmrserviceSoapClient client = new QMRServiceReference.qmrserviceSoapClient();
 
-
-
-                gvtwo.DataSource = client.GetListRooms();
-                gvtwo.DataBind();
+                    gvtwo.DataSource = client.GetListRooms();
+                    gvtwo.DataBind();
+                }
             }
-            
-
         }
 
 
@@ -47,9 +43,7 @@ namespace WebApplication2
                     int RoomID;
                     int.TryParse(s, out RoomID);
 
-                    QMRServiceReference.RoomsClient client = new QMRServiceReference.RoomsClient();
-                    client.ClientCredentials.UserName.UserName = "ITIT";
-                    client.ClientCredentials.UserName.Password = "ITIT2017";
+                    QMRServiceReference.qmrserviceSoapClient client = new QMRServiceReference.qmrserviceSoapClient();
 
                     client.ReserveRoom(RoomID, true);
                     

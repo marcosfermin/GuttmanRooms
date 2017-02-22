@@ -17,12 +17,10 @@ namespace WebApplication2
          } 
         protected void loginbutton_Click(object sender, EventArgs e)
         {
-            QMRServiceReference.RoomsClient client = new QMRServiceReference.RoomsClient();
-            client.ClientCredentials.UserName.UserName = "ITIT";
-            client.ClientCredentials.UserName.Password = "ITIT2017";
+            QMRServiceReference.qmrserviceSoapClient client = new QMRServiceReference.qmrserviceSoapClient();
 
-           String loginSuccess = client.Login(txtUsername.Text, txtPassword.Text);
-           if (loginSuccess == "Success")
+            string loginSuccess = client.Login(txtUsername.Text, txtPassword.Text);
+            if (loginSuccess == "Success")
             {
                 Session.Add("user", txtUsername.Text);
                 Response.Redirect("~/default.aspx", true);

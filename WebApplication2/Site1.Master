@@ -19,7 +19,7 @@
     <form id="form1" runat="server">
 <div class="text-right">
         <p>
-            <asp:LinkButton ID="LogoutLinkButton" runat="server" OnClick="LogoutLinkButton_Click"><b>Log Out</b></asp:LinkButton>
+            <asp:LinkButton ID="LogoutLinkButton" runat="server" OnClick="LogoutLinkButton_Click"><b><img src="img/logout.png" /> Log Out</b></asp:LinkButton>
         </p>
 </div>
     <div>

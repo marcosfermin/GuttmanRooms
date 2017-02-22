@@ -17,7 +17,8 @@ namespace WebApplication2
         protected void LogoutLinkButton_Click(object sender, EventArgs e)
         {
             // Logout functionality for the default page
-            Session.Abandon();
+            //Session.Abandon();
+            Session.Clear();
             Response.Redirect("~/Login.aspx", true);
             // End of Logout functionality for the default page
         }

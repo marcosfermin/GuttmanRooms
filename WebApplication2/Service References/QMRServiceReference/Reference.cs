@@ -15,21 +15,19 @@ namespace WebApplication2.QMRServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Room", Namespace="http://schemas.datacontract.org/2004/07/QMRService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Room", Namespace="http://tempuri.org/")]
     [System.SerializableAttribute()]
     public partial class Room : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool OccupiedField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int RoomIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string RoomNameField;
+        
+        private bool OccupiedField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -41,20 +39,7 @@ namespace WebApplication2.QMRServiceReference {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Occupied {
-            get {
-                return this.OccupiedField;
-            }
-            set {
-                if ((this.OccupiedField.Equals(value) != true)) {
-                    this.OccupiedField = value;
-                    this.RaisePropertyChanged("Occupied");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
         public int RoomID {
             get {
                 return this.RoomIDField;
@@ -67,7 +52,7 @@ namespace WebApplication2.QMRServiceReference {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
         public string RoomName {
             get {
                 return this.RoomNameField;
@@ -76,6 +61,19 @@ namespace WebApplication2.QMRServiceReference {
                 if ((object.ReferenceEquals(this.RoomNameField, value) != true)) {
                     this.RoomNameField = value;
                     this.RaisePropertyChanged("RoomName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+        public bool Occupied {
+            get {
+                return this.OccupiedField;
+            }
+            set {
+                if ((this.OccupiedField.Equals(value) != true)) {
+                    this.OccupiedField = value;
+                    this.RaisePropertyChanged("Occupied");
                 }
             }
         }
@@ -91,103 +89,607 @@ namespace WebApplication2.QMRServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="QMRServiceReference.IRooms")]
-    public interface IRooms {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="QMRServiceReference.qmrserviceSoap")]
+    public interface qmrserviceSoap {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRooms/GetRoomByRoomID", ReplyAction="http://tempuri.org/IRooms/GetRoomByRoomIDResponse")]
-        WebApplication2.QMRServiceReference.Room GetRoomByRoomID(int value);
+        // CODEGEN: Generating message contract since element name GetRoomByRoomIDResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetRoomByRoomID", ReplyAction="*")]
+        WebApplication2.QMRServiceReference.GetRoomByRoomIDResponse GetRoomByRoomID(WebApplication2.QMRServiceReference.GetRoomByRoomIDRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRooms/GetRoomByRoomID", ReplyAction="http://tempuri.org/IRooms/GetRoomByRoomIDResponse")]
-        System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.Room> GetRoomByRoomIDAsync(int value);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetRoomByRoomID", ReplyAction="*")]
+        System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.GetRoomByRoomIDResponse> GetRoomByRoomIDAsync(WebApplication2.QMRServiceReference.GetRoomByRoomIDRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRooms/GetRoomBySensorID", ReplyAction="http://tempuri.org/IRooms/GetRoomBySensorIDResponse")]
-        WebApplication2.QMRServiceReference.Room GetRoomBySensorID(int value);
+        // CODEGEN: Generating message contract since element name GetRoomBySensorIDResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetRoomBySensorID", ReplyAction="*")]
+        WebApplication2.QMRServiceReference.GetRoomBySensorIDResponse GetRoomBySensorID(WebApplication2.QMRServiceReference.GetRoomBySensorIDRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRooms/GetRoomBySensorID", ReplyAction="http://tempuri.org/IRooms/GetRoomBySensorIDResponse")]
-        System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.Room> GetRoomBySensorIDAsync(int value);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetRoomBySensorID", ReplyAction="*")]
+        System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.GetRoomBySensorIDResponse> GetRoomBySensorIDAsync(WebApplication2.QMRServiceReference.GetRoomBySensorIDRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRooms/GetListRooms", ReplyAction="http://tempuri.org/IRooms/GetListRoomsResponse")]
-        WebApplication2.QMRServiceReference.Room[] GetListRooms();
+        // CODEGEN: Generating message contract since element name GetListRoomsResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListRooms", ReplyAction="*")]
+        WebApplication2.QMRServiceReference.GetListRoomsResponse GetListRooms(WebApplication2.QMRServiceReference.GetListRoomsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRooms/GetListRooms", ReplyAction="http://tempuri.org/IRooms/GetListRoomsResponse")]
-        System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.Room[]> GetListRoomsAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListRooms", ReplyAction="*")]
+        System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.GetListRoomsResponse> GetListRoomsAsync(WebApplication2.QMRServiceReference.GetListRoomsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRooms/AddRoom", ReplyAction="http://tempuri.org/IRooms/AddRoomResponse")]
-        void AddRoom(string roomName);
+        // CODEGEN: Generating message contract since element name roomName from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddRoom", ReplyAction="*")]
+        WebApplication2.QMRServiceReference.AddRoomResponse AddRoom(WebApplication2.QMRServiceReference.AddRoomRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRooms/AddRoom", ReplyAction="http://tempuri.org/IRooms/AddRoomResponse")]
-        System.Threading.Tasks.Task AddRoomAsync(string roomName);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddRoom", ReplyAction="*")]
+        System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.AddRoomResponse> AddRoomAsync(WebApplication2.QMRServiceReference.AddRoomRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRooms/ReserveRoom", ReplyAction="http://tempuri.org/IRooms/ReserveRoomResponse")]
+        // CODEGEN: Generating message contract since element name ipaddr from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddSensor", ReplyAction="*")]
+        WebApplication2.QMRServiceReference.AddSensorResponse AddSensor(WebApplication2.QMRServiceReference.AddSensorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddSensor", ReplyAction="*")]
+        System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.AddSensorResponse> AddSensorAsync(WebApplication2.QMRServiceReference.AddSensorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ReserveRoom", ReplyAction="*")]
         void ReserveRoom(int roomID, bool occupied);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRooms/ReserveRoom", ReplyAction="http://tempuri.org/IRooms/ReserveRoomResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ReserveRoom", ReplyAction="*")]
         System.Threading.Tasks.Task ReserveRoomAsync(int roomID, bool occupied);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRooms/Login", ReplyAction="http://tempuri.org/IRooms/LoginResponse")]
-        string Login(string username, string password);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ReserveRoomBySensor", ReplyAction="*")]
+        void ReserveRoomBySensor(int sensorID, int roomID, bool occupied);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRooms/Login", ReplyAction="http://tempuri.org/IRooms/LoginResponse")]
-        System.Threading.Tasks.Task<string> LoginAsync(string username, string password);
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IRoomsChannel : WebApplication2.QMRServiceReference.IRooms, System.ServiceModel.IClientChannel {
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ReserveRoomBySensor", ReplyAction="*")]
+        System.Threading.Tasks.Task ReserveRoomBySensorAsync(int sensorID, int roomID, bool occupied);
+        
+        // CODEGEN: Generating message contract since element name username from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Login", ReplyAction="*")]
+        WebApplication2.QMRServiceReference.LoginResponse Login(WebApplication2.QMRServiceReference.LoginRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Login", ReplyAction="*")]
+        System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.LoginResponse> LoginAsync(WebApplication2.QMRServiceReference.LoginRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class RoomsClient : System.ServiceModel.ClientBase<WebApplication2.QMRServiceReference.IRooms>, WebApplication2.QMRServiceReference.IRooms {
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetRoomByRoomIDRequest {
         
-        public RoomsClient() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetRoomByRoomID", Namespace="http://tempuri.org/", Order=0)]
+        public WebApplication2.QMRServiceReference.GetRoomByRoomIDRequestBody Body;
+        
+        public GetRoomByRoomIDRequest() {
         }
         
-        public RoomsClient(string endpointConfigurationName) : 
+        public GetRoomByRoomIDRequest(WebApplication2.QMRServiceReference.GetRoomByRoomIDRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetRoomByRoomIDRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int value;
+        
+        public GetRoomByRoomIDRequestBody() {
+        }
+        
+        public GetRoomByRoomIDRequestBody(int value) {
+            this.value = value;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetRoomByRoomIDResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetRoomByRoomIDResponse", Namespace="http://tempuri.org/", Order=0)]
+        public WebApplication2.QMRServiceReference.GetRoomByRoomIDResponseBody Body;
+        
+        public GetRoomByRoomIDResponse() {
+        }
+        
+        public GetRoomByRoomIDResponse(WebApplication2.QMRServiceReference.GetRoomByRoomIDResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetRoomByRoomIDResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public WebApplication2.QMRServiceReference.Room GetRoomByRoomIDResult;
+        
+        public GetRoomByRoomIDResponseBody() {
+        }
+        
+        public GetRoomByRoomIDResponseBody(WebApplication2.QMRServiceReference.Room GetRoomByRoomIDResult) {
+            this.GetRoomByRoomIDResult = GetRoomByRoomIDResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetRoomBySensorIDRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetRoomBySensorID", Namespace="http://tempuri.org/", Order=0)]
+        public WebApplication2.QMRServiceReference.GetRoomBySensorIDRequestBody Body;
+        
+        public GetRoomBySensorIDRequest() {
+        }
+        
+        public GetRoomBySensorIDRequest(WebApplication2.QMRServiceReference.GetRoomBySensorIDRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetRoomBySensorIDRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int value;
+        
+        public GetRoomBySensorIDRequestBody() {
+        }
+        
+        public GetRoomBySensorIDRequestBody(int value) {
+            this.value = value;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetRoomBySensorIDResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetRoomBySensorIDResponse", Namespace="http://tempuri.org/", Order=0)]
+        public WebApplication2.QMRServiceReference.GetRoomBySensorIDResponseBody Body;
+        
+        public GetRoomBySensorIDResponse() {
+        }
+        
+        public GetRoomBySensorIDResponse(WebApplication2.QMRServiceReference.GetRoomBySensorIDResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetRoomBySensorIDResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public WebApplication2.QMRServiceReference.Room GetRoomBySensorIDResult;
+        
+        public GetRoomBySensorIDResponseBody() {
+        }
+        
+        public GetRoomBySensorIDResponseBody(WebApplication2.QMRServiceReference.Room GetRoomBySensorIDResult) {
+            this.GetRoomBySensorIDResult = GetRoomBySensorIDResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetListRoomsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetListRooms", Namespace="http://tempuri.org/", Order=0)]
+        public WebApplication2.QMRServiceReference.GetListRoomsRequestBody Body;
+        
+        public GetListRoomsRequest() {
+        }
+        
+        public GetListRoomsRequest(WebApplication2.QMRServiceReference.GetListRoomsRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetListRoomsRequestBody {
+        
+        public GetListRoomsRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetListRoomsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetListRoomsResponse", Namespace="http://tempuri.org/", Order=0)]
+        public WebApplication2.QMRServiceReference.GetListRoomsResponseBody Body;
+        
+        public GetListRoomsResponse() {
+        }
+        
+        public GetListRoomsResponse(WebApplication2.QMRServiceReference.GetListRoomsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetListRoomsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public WebApplication2.QMRServiceReference.Room[] GetListRoomsResult;
+        
+        public GetListRoomsResponseBody() {
+        }
+        
+        public GetListRoomsResponseBody(WebApplication2.QMRServiceReference.Room[] GetListRoomsResult) {
+            this.GetListRoomsResult = GetListRoomsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddRoomRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddRoom", Namespace="http://tempuri.org/", Order=0)]
+        public WebApplication2.QMRServiceReference.AddRoomRequestBody Body;
+        
+        public AddRoomRequest() {
+        }
+        
+        public AddRoomRequest(WebApplication2.QMRServiceReference.AddRoomRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class AddRoomRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string roomName;
+        
+        public AddRoomRequestBody() {
+        }
+        
+        public AddRoomRequestBody(string roomName) {
+            this.roomName = roomName;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddRoomResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddRoomResponse", Namespace="http://tempuri.org/", Order=0)]
+        public WebApplication2.QMRServiceReference.AddRoomResponseBody Body;
+        
+        public AddRoomResponse() {
+        }
+        
+        public AddRoomResponse(WebApplication2.QMRServiceReference.AddRoomResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class AddRoomResponseBody {
+        
+        public AddRoomResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddSensorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddSensor", Namespace="http://tempuri.org/", Order=0)]
+        public WebApplication2.QMRServiceReference.AddSensorRequestBody Body;
+        
+        public AddSensorRequest() {
+        }
+        
+        public AddSensorRequest(WebApplication2.QMRServiceReference.AddSensorRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class AddSensorRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int roomID;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string ipaddr;
+        
+        public AddSensorRequestBody() {
+        }
+        
+        public AddSensorRequestBody(int roomID, string ipaddr) {
+            this.roomID = roomID;
+            this.ipaddr = ipaddr;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddSensorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddSensorResponse", Namespace="http://tempuri.org/", Order=0)]
+        public WebApplication2.QMRServiceReference.AddSensorResponseBody Body;
+        
+        public AddSensorResponse() {
+        }
+        
+        public AddSensorResponse(WebApplication2.QMRServiceReference.AddSensorResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class AddSensorResponseBody {
+        
+        public AddSensorResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class LoginRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="Login", Namespace="http://tempuri.org/", Order=0)]
+        public WebApplication2.QMRServiceReference.LoginRequestBody Body;
+        
+        public LoginRequest() {
+        }
+        
+        public LoginRequest(WebApplication2.QMRServiceReference.LoginRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class LoginRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string username;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string password;
+        
+        public LoginRequestBody() {
+        }
+        
+        public LoginRequestBody(string username, string password) {
+            this.username = username;
+            this.password = password;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class LoginResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="LoginResponse", Namespace="http://tempuri.org/", Order=0)]
+        public WebApplication2.QMRServiceReference.LoginResponseBody Body;
+        
+        public LoginResponse() {
+        }
+        
+        public LoginResponse(WebApplication2.QMRServiceReference.LoginResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class LoginResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string LoginResult;
+        
+        public LoginResponseBody() {
+        }
+        
+        public LoginResponseBody(string LoginResult) {
+            this.LoginResult = LoginResult;
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface qmrserviceSoapChannel : WebApplication2.QMRServiceReference.qmrserviceSoap, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class qmrserviceSoapClient : System.ServiceModel.ClientBase<WebApplication2.QMRServiceReference.qmrserviceSoap>, WebApplication2.QMRServiceReference.qmrserviceSoap {
+        
+        public qmrserviceSoapClient() {
+        }
+        
+        public qmrserviceSoapClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public RoomsClient(string endpointConfigurationName, string remoteAddress) : 
+        public qmrserviceSoapClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public RoomsClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public qmrserviceSoapClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public RoomsClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public qmrserviceSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
-        public WebApplication2.QMRServiceReference.Room GetRoomByRoomID(int value) {
-            return base.Channel.GetRoomByRoomID(value);
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebApplication2.QMRServiceReference.GetRoomByRoomIDResponse WebApplication2.QMRServiceReference.qmrserviceSoap.GetRoomByRoomID(WebApplication2.QMRServiceReference.GetRoomByRoomIDRequest request) {
+            return base.Channel.GetRoomByRoomID(request);
         }
         
-        public System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.Room> GetRoomByRoomIDAsync(int value) {
-            return base.Channel.GetRoomByRoomIDAsync(value);
+        public WebApplication2.QMRServiceReference.Room GetRoomByRoomID(int value) {
+            WebApplication2.QMRServiceReference.GetRoomByRoomIDRequest inValue = new WebApplication2.QMRServiceReference.GetRoomByRoomIDRequest();
+            inValue.Body = new WebApplication2.QMRServiceReference.GetRoomByRoomIDRequestBody();
+            inValue.Body.value = value;
+            WebApplication2.QMRServiceReference.GetRoomByRoomIDResponse retVal = ((WebApplication2.QMRServiceReference.qmrserviceSoap)(this)).GetRoomByRoomID(inValue);
+            return retVal.Body.GetRoomByRoomIDResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.GetRoomByRoomIDResponse> WebApplication2.QMRServiceReference.qmrserviceSoap.GetRoomByRoomIDAsync(WebApplication2.QMRServiceReference.GetRoomByRoomIDRequest request) {
+            return base.Channel.GetRoomByRoomIDAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.GetRoomByRoomIDResponse> GetRoomByRoomIDAsync(int value) {
+            WebApplication2.QMRServiceReference.GetRoomByRoomIDRequest inValue = new WebApplication2.QMRServiceReference.GetRoomByRoomIDRequest();
+            inValue.Body = new WebApplication2.QMRServiceReference.GetRoomByRoomIDRequestBody();
+            inValue.Body.value = value;
+            return ((WebApplication2.QMRServiceReference.qmrserviceSoap)(this)).GetRoomByRoomIDAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebApplication2.QMRServiceReference.GetRoomBySensorIDResponse WebApplication2.QMRServiceReference.qmrserviceSoap.GetRoomBySensorID(WebApplication2.QMRServiceReference.GetRoomBySensorIDRequest request) {
+            return base.Channel.GetRoomBySensorID(request);
         }
         
         public WebApplication2.QMRServiceReference.Room GetRoomBySensorID(int value) {
-            return base.Channel.GetRoomBySensorID(value);
+            WebApplication2.QMRServiceReference.GetRoomBySensorIDRequest inValue = new WebApplication2.QMRServiceReference.GetRoomBySensorIDRequest();
+            inValue.Body = new WebApplication2.QMRServiceReference.GetRoomBySensorIDRequestBody();
+            inValue.Body.value = value;
+            WebApplication2.QMRServiceReference.GetRoomBySensorIDResponse retVal = ((WebApplication2.QMRServiceReference.qmrserviceSoap)(this)).GetRoomBySensorID(inValue);
+            return retVal.Body.GetRoomBySensorIDResult;
         }
         
-        public System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.Room> GetRoomBySensorIDAsync(int value) {
-            return base.Channel.GetRoomBySensorIDAsync(value);
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.GetRoomBySensorIDResponse> WebApplication2.QMRServiceReference.qmrserviceSoap.GetRoomBySensorIDAsync(WebApplication2.QMRServiceReference.GetRoomBySensorIDRequest request) {
+            return base.Channel.GetRoomBySensorIDAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.GetRoomBySensorIDResponse> GetRoomBySensorIDAsync(int value) {
+            WebApplication2.QMRServiceReference.GetRoomBySensorIDRequest inValue = new WebApplication2.QMRServiceReference.GetRoomBySensorIDRequest();
+            inValue.Body = new WebApplication2.QMRServiceReference.GetRoomBySensorIDRequestBody();
+            inValue.Body.value = value;
+            return ((WebApplication2.QMRServiceReference.qmrserviceSoap)(this)).GetRoomBySensorIDAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebApplication2.QMRServiceReference.GetListRoomsResponse WebApplication2.QMRServiceReference.qmrserviceSoap.GetListRooms(WebApplication2.QMRServiceReference.GetListRoomsRequest request) {
+            return base.Channel.GetListRooms(request);
         }
         
         public WebApplication2.QMRServiceReference.Room[] GetListRooms() {
-            return base.Channel.GetListRooms();
+            WebApplication2.QMRServiceReference.GetListRoomsRequest inValue = new WebApplication2.QMRServiceReference.GetListRoomsRequest();
+            inValue.Body = new WebApplication2.QMRServiceReference.GetListRoomsRequestBody();
+            WebApplication2.QMRServiceReference.GetListRoomsResponse retVal = ((WebApplication2.QMRServiceReference.qmrserviceSoap)(this)).GetListRooms(inValue);
+            return retVal.Body.GetListRoomsResult;
         }
         
-        public System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.Room[]> GetListRoomsAsync() {
-            return base.Channel.GetListRoomsAsync();
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.GetListRoomsResponse> WebApplication2.QMRServiceReference.qmrserviceSoap.GetListRoomsAsync(WebApplication2.QMRServiceReference.GetListRoomsRequest request) {
+            return base.Channel.GetListRoomsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.GetListRoomsResponse> GetListRoomsAsync() {
+            WebApplication2.QMRServiceReference.GetListRoomsRequest inValue = new WebApplication2.QMRServiceReference.GetListRoomsRequest();
+            inValue.Body = new WebApplication2.QMRServiceReference.GetListRoomsRequestBody();
+            return ((WebApplication2.QMRServiceReference.qmrserviceSoap)(this)).GetListRoomsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebApplication2.QMRServiceReference.AddRoomResponse WebApplication2.QMRServiceReference.qmrserviceSoap.AddRoom(WebApplication2.QMRServiceReference.AddRoomRequest request) {
+            return base.Channel.AddRoom(request);
         }
         
         public void AddRoom(string roomName) {
-            base.Channel.AddRoom(roomName);
+            WebApplication2.QMRServiceReference.AddRoomRequest inValue = new WebApplication2.QMRServiceReference.AddRoomRequest();
+            inValue.Body = new WebApplication2.QMRServiceReference.AddRoomRequestBody();
+            inValue.Body.roomName = roomName;
+            WebApplication2.QMRServiceReference.AddRoomResponse retVal = ((WebApplication2.QMRServiceReference.qmrserviceSoap)(this)).AddRoom(inValue);
         }
         
-        public System.Threading.Tasks.Task AddRoomAsync(string roomName) {
-            return base.Channel.AddRoomAsync(roomName);
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.AddRoomResponse> WebApplication2.QMRServiceReference.qmrserviceSoap.AddRoomAsync(WebApplication2.QMRServiceReference.AddRoomRequest request) {
+            return base.Channel.AddRoomAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.AddRoomResponse> AddRoomAsync(string roomName) {
+            WebApplication2.QMRServiceReference.AddRoomRequest inValue = new WebApplication2.QMRServiceReference.AddRoomRequest();
+            inValue.Body = new WebApplication2.QMRServiceReference.AddRoomRequestBody();
+            inValue.Body.roomName = roomName;
+            return ((WebApplication2.QMRServiceReference.qmrserviceSoap)(this)).AddRoomAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebApplication2.QMRServiceReference.AddSensorResponse WebApplication2.QMRServiceReference.qmrserviceSoap.AddSensor(WebApplication2.QMRServiceReference.AddSensorRequest request) {
+            return base.Channel.AddSensor(request);
+        }
+        
+        public void AddSensor(int roomID, string ipaddr) {
+            WebApplication2.QMRServiceReference.AddSensorRequest inValue = new WebApplication2.QMRServiceReference.AddSensorRequest();
+            inValue.Body = new WebApplication2.QMRServiceReference.AddSensorRequestBody();
+            inValue.Body.roomID = roomID;
+            inValue.Body.ipaddr = ipaddr;
+            WebApplication2.QMRServiceReference.AddSensorResponse retVal = ((WebApplication2.QMRServiceReference.qmrserviceSoap)(this)).AddSensor(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.AddSensorResponse> WebApplication2.QMRServiceReference.qmrserviceSoap.AddSensorAsync(WebApplication2.QMRServiceReference.AddSensorRequest request) {
+            return base.Channel.AddSensorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.AddSensorResponse> AddSensorAsync(int roomID, string ipaddr) {
+            WebApplication2.QMRServiceReference.AddSensorRequest inValue = new WebApplication2.QMRServiceReference.AddSensorRequest();
+            inValue.Body = new WebApplication2.QMRServiceReference.AddSensorRequestBody();
+            inValue.Body.roomID = roomID;
+            inValue.Body.ipaddr = ipaddr;
+            return ((WebApplication2.QMRServiceReference.qmrserviceSoap)(this)).AddSensorAsync(inValue);
         }
         
         public void ReserveRoom(int roomID, bool occupied) {
@@ -198,73 +700,39 @@ namespace WebApplication2.QMRServiceReference {
             return base.Channel.ReserveRoomAsync(roomID, occupied);
         }
         
-        public string Login(string username, string password) {
-            return base.Channel.Login(username, password);
-        }
-        
-        public System.Threading.Tasks.Task<string> LoginAsync(string username, string password) {
-            return base.Channel.LoginAsync(username, password);
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="QMRServiceReference.ISensors")]
-    public interface ISensors {
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISensors/AddSensor", ReplyAction="http://tempuri.org/ISensors/AddSensorResponse")]
-        void AddSensor(int roomID, string ipaddr);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISensors/AddSensor", ReplyAction="http://tempuri.org/ISensors/AddSensorResponse")]
-        System.Threading.Tasks.Task AddSensorAsync(int roomID, string ipaddr);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISensors/ReserveRoomBySensor", ReplyAction="http://tempuri.org/ISensors/ReserveRoomBySensorResponse")]
-        void ReserveRoomBySensor(int sensorID, int roomID, bool occupied);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISensors/ReserveRoomBySensor", ReplyAction="http://tempuri.org/ISensors/ReserveRoomBySensorResponse")]
-        System.Threading.Tasks.Task ReserveRoomBySensorAsync(int sensorID, int roomID, bool occupied);
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ISensorsChannel : WebApplication2.QMRServiceReference.ISensors, System.ServiceModel.IClientChannel {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class SensorsClient : System.ServiceModel.ClientBase<WebApplication2.QMRServiceReference.ISensors>, WebApplication2.QMRServiceReference.ISensors {
-        
-        public SensorsClient() {
-        }
-        
-        public SensorsClient(string endpointConfigurationName) : 
-                base(endpointConfigurationName) {
-        }
-        
-        public SensorsClient(string endpointConfigurationName, string remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
-        }
-        
-        public SensorsClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
-        }
-        
-        public SensorsClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(binding, remoteAddress) {
-        }
-        
-        public void AddSensor(int roomID, string ipaddr) {
-            base.Channel.AddSensor(roomID, ipaddr);
-        }
-        
-        public System.Threading.Tasks.Task AddSensorAsync(int roomID, string ipaddr) {
-            return base.Channel.AddSensorAsync(roomID, ipaddr);
-        }
-        
         public void ReserveRoomBySensor(int sensorID, int roomID, bool occupied) {
             base.Channel.ReserveRoomBySensor(sensorID, roomID, occupied);
         }
         
         public System.Threading.Tasks.Task ReserveRoomBySensorAsync(int sensorID, int roomID, bool occupied) {
             return base.Channel.ReserveRoomBySensorAsync(sensorID, roomID, occupied);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebApplication2.QMRServiceReference.LoginResponse WebApplication2.QMRServiceReference.qmrserviceSoap.Login(WebApplication2.QMRServiceReference.LoginRequest request) {
+            return base.Channel.Login(request);
+        }
+        
+        public string Login(string username, string password) {
+            WebApplication2.QMRServiceReference.LoginRequest inValue = new WebApplication2.QMRServiceReference.LoginRequest();
+            inValue.Body = new WebApplication2.QMRServiceReference.LoginRequestBody();
+            inValue.Body.username = username;
+            inValue.Body.password = password;
+            WebApplication2.QMRServiceReference.LoginResponse retVal = ((WebApplication2.QMRServiceReference.qmrserviceSoap)(this)).Login(inValue);
+            return retVal.Body.LoginResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.LoginResponse> WebApplication2.QMRServiceReference.qmrserviceSoap.LoginAsync(WebApplication2.QMRServiceReference.LoginRequest request) {
+            return base.Channel.LoginAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.LoginResponse> LoginAsync(string username, string password) {
+            WebApplication2.QMRServiceReference.LoginRequest inValue = new WebApplication2.QMRServiceReference.LoginRequest();
+            inValue.Body = new WebApplication2.QMRServiceReference.LoginRequestBody();
+            inValue.Body.username = username;
+            inValue.Body.password = password;
+            return ((WebApplication2.QMRServiceReference.qmrserviceSoap)(this)).LoginAsync(inValue);
         }
     }
 }

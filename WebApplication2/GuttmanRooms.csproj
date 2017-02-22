@@ -97,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="img\guttman_logo_leftbar_top.png" />
+    <Content Include="img\logout.png" />
     <Content Include="Login.aspx" />
     <Content Include="login\style.css" />
     <Content Include="packages.config" />
@@ -107,7 +108,7 @@
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.0.js" />
     <Content Include="Scripts\jquery-2.2.0.min.js" />
-    <None Include="Service References\QMRServiceReference\Service.disco" />
+    <None Include="Service References\QMRServiceReference\qmrservice.disco" />
     <None Include="Service References\QMRServiceReference\configuration91.svcinfo" />
     <None Include="Service References\QMRServiceReference\configuration.svcinfo" />
     <None Include="Service References\QMRServiceReference\Reference.svcmap">
@@ -116,16 +117,25 @@
     </None>
     <Content Include="Site1.Master" />
     <Content Include="Scripts\jquery-2.2.0.min.map" />
-    <None Include="Service References\QMRServiceReference\Service.wsdl" />
-    <None Include="Service References\QMRServiceReference\Service.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\QMRServiceReference\Service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\QMRServiceReference\Service2.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Service References\QMRServiceReference\qmrservice.wsdl" />
+    <Content Include="Service References\QMRServiceReference\WebApplication2.QMRServiceReference.AddRoomResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\QMRServiceReference\WebApplication2.QMRServiceReference.AddSensorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\QMRServiceReference\WebApplication2.QMRServiceReference.GetListRoomsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\QMRServiceReference\WebApplication2.QMRServiceReference.GetRoomByRoomIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\QMRServiceReference\WebApplication2.QMRServiceReference.GetRoomBySensorIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\QMRServiceReference\WebApplication2.QMRServiceReference.LoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Service References\QMRServiceReference\WebApplication2.QMRServiceReference.Room.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
