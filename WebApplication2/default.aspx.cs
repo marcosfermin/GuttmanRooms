@@ -13,6 +13,11 @@ namespace WebApplication2
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session.IsNewSession)
+            {
+                Response.Redirect("~/Login.aspx", true);
+            }
+
             if (!IsPostBack)
             {
                 QMRServiceReference.RoomsClient client = new QMRServiceReference.RoomsClient();
@@ -24,20 +29,7 @@ namespace WebApplication2
                 gvtwo.DataSource = client.GetListRooms();
                 gvtwo.DataBind();
             }
-            //gvone.DataSource = client.GetListRooms();
-            //gvone.DataBind();
-
-            // var rms = client.GetListRooms();
-            //        var rmbySensorID = client.GetRoomBySensorID(1);
-            //        var rmbyRoomID = client.GetRoomByRoomID;
-
-            // foreach (var room in rms)
-            //{
-            //    Label.Text = Label.Text + " " + room.RoomName;
-            //    string name = room.RoomName;
-            //    int roomid = room.RoomID;
-            //    bool occupied = room.Occupied;
-            //client.Close();
+            
 
         }
 
@@ -69,47 +61,12 @@ namespace WebApplication2
                     Label1.Text = RoomID.ToString();
                     break;
 
-               
-
                 default:
               
                     break;
 
             }
 
-            //Functionality to UNSet Room Reservation
-
-            switch (((Button)e.CommandSource).CommandName)
-            {
-
-                case "Unreserve": 
-                    String s = e.CommandArgument.ToString();
-                    int RoomID;
-                    int.TryParse(s, out RoomID);
-
-                    QMRServiceReference.RoomsClient client = new QMRServiceReference.RoomsClient();
-                    client.ClientCredentials.UserName.UserName = "ITIT";
-                    client.ClientCredentials.UserName.Password = "ITIT2017";
-
-                    client.ReserveRoom(RoomID, false);
-
-                    gvtwo.DataSource = client.GetListRooms();
-                    gvtwo.DataBind();
-                    
-
-                    Label1.Text = RoomID.ToString();
-                    break;
-
-               
-
-                default:
-
-                    break;
-
-            }
-
         }
-
-       
     }
 }

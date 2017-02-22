@@ -13,24 +13,22 @@ namespace WebApplication2
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        } 
+        
+         } 
         protected void loginbutton_Click(object sender, EventArgs e)
         {
             QMRServiceReference.RoomsClient client = new QMRServiceReference.RoomsClient();
             client.ClientCredentials.UserName.UserName = "ITIT";
             client.ClientCredentials.UserName.Password = "ITIT2017";
 
-            var uname = txtUsername.Text;
-
-            if (uname != string.Empty)
+           String loginSuccess = client.Login(txtUsername.Text, txtPassword.Text);
+           if (loginSuccess == "Success")
             {
-
+                Session.Add("user", txtUsername.Text);
+                Response.Redirect("~/default.aspx", true);
+                
             }
-        }
-            // I need to retrieve the values from the front-end (Login.aspx) Login page
-            // 1) Check if values are empty
-            // 2) If they are not empty, pass the login values to the "Login" method. 
 
+        }
     }
 }

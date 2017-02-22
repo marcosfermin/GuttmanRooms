@@ -2,22 +2,17 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        .auto-style2 {
-            height: 38px;
-        }
-
-        .auto-style3 {
-            height: 35px;
-        }
-
-        .auto-style4 {
-            height: 37px;
-        }
-    </style>
-</asp:Content>
+    .auto-style1 {
+        color: #005DAA;
+    }
+</style>
+    </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <center><h1 class="auto-style1">Guttman Rooms</h1></center>
+    <center>
+        <h1 class="auto-style1">Reserve a Room</h1>
+    <br />
+    </center>
 
     <%-- GridView of the Data --%>
    <asp:GridView id="gvtwo" runat="server" cssclass="table table-responsive" AutoGenerateColumns="False" 
@@ -52,22 +47,9 @@
                 <asp:Button ID="ReserveButton" runat="server" Text="Reserve" CommandName="Reserve" CommandArgument='<%# Eval("RoomID") %>' Visible='<%# !(bool)(Eval("Occupied")) %>' />
                 </itemtemplate>
             </asp:templatefield>
-            <asp:templatefield HeaderText="Unreserve">
-                <headertemplate>
-                    Unreserve
-                </headertemplate>
-                <itemtemplate>
-                <%-- Here is where the data of the room UNreservation will appear --%>
-                <%-- If the boolean value "Occupied" is false (Meaning that the Room is available), the UNreserveButton will disappear --%>
-                <asp:Button ID="UnreserveButton" runat="server" Text="Unreserve" CommandName="Unreserve" CommandArgument='<%# Eval("RoomID") %>' Visible='<%# (Eval("Occupied")) %>' />
-                </itemtemplate>
-            </asp:templatefield>
-
         </columns>
     </asp:GridView>
-
     <asp:Label ID="Label1" runat="server"></asp:Label>
-
 </asp:Content>
 
 

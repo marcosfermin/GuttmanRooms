@@ -6,8 +6,10 @@
 <head runat="server">
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
+        <%--CSS Stylesheet (Bootstrap)--%>
         <link href="Content/bootstrap.css" rel="stylesheet" />
-        <link rel="stylesheet" type="text/css" href="login/style.css"> <%--CSS stylesheet for the login form only--%>
+         <%--CSS stylesheet for the login form only--%>
+        <link rel="stylesheet" type="text/css" href="login/style.css">
         <style type="text/css">
             .auto-style1 {
                 color: #005DAA;

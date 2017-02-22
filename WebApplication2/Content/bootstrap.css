@@ -1099,6 +1099,7 @@ textarea {
 a {
   color: #337ab7;
   text-decoration: none;
+    text-align: right;
 }
 a:hover,
 a:focus {
@@ -1289,6 +1290,7 @@ h6,
 }
 p {
   margin: 0 0 10px;
+    text-align: right;
 }
 .lead {
   margin-bottom: 20px;
