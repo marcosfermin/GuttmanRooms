@@ -96,6 +96,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="img\favicon.ico" />
     <Content Include="img\guttman_logo_leftbar_top.png" />
     <Content Include="img\logout.png" />
     <Content Include="Login.aspx" />
