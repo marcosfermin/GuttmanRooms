@@ -15,6 +15,7 @@
     </center>
 
     <%-- GridView of the Data --%>
+    <div class="gvoutside">
    <asp:GridView id="gvtwo" runat="server" cssclass="table table-responsive grid" AutoGenerateColumns="False" 
         OnRowCommand="gvtwo_RowCommand">
        <columns>
@@ -44,11 +45,12 @@
                 <itemtemplate>
                 <%-- Here is where the data of the room reservation will appear --%>
                 <%-- If the boolean value "Occupied" is false (Meaning that the Room is available), the ReserveButton will appear --%>
-                <asp:Button ID="ReserveButton" runat="server" Text="Reserve" CssClass="grid" CommandName="Reserve" CommandArgument='<%# Eval("RoomID") %>' Visible='<%# !(bool)(Eval("Occupied")) %>' />
+                <asp:Button ID="ReserveButton" runat="server" Text="Reserve" CommandName="Reserve" CommandArgument='<%# Eval("RoomID") %>' Visible='<%# !(bool)(Eval("Occupied")) %>' />
                 </itemtemplate>
             </asp:templatefield>
         </columns>
     </asp:GridView>
+</div>
     <asp:Label ID="Label1" runat="server"></asp:Label>
 </asp:Content>
 
