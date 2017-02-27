@@ -6,6 +6,12 @@ This is the CSS Stylesheet of the Login front-end (Login.aspx)
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
+.logo {
+  background-color: #005DAA;
+  margin-bottom: 20px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
 .login-page {
   width: 360px;
   padding: 8% 0 0;
@@ -19,6 +25,7 @@ This is the CSS Stylesheet of the Login front-end (Login.aspx)
   max-width: 360px;
   margin: 0 auto 100px;
   padding: 45px;
+  padding-bottom: 125px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     top: 0px;

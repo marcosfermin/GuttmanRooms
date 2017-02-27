@@ -6,6 +6,7 @@
 <head runat="server">
     <title>Guttman Rooms</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <meta http-equiv="refresh" content="30" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <link href="Content/bootstrap.css" rel="stylesheet" />
