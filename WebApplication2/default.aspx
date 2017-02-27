@@ -51,7 +51,6 @@
         </columns>
     </asp:GridView>
 </div>
-    <asp:Label ID="Label1" runat="server"></asp:Label>
 </asp:Content>
 
 

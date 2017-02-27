@@ -50,9 +50,7 @@ namespace WebApplication2
 
                     gvtwo.DataSource = client.GetListRooms();
                     gvtwo.DataBind();
-                  
-
-                    Label1.Text = RoomID.ToString();
+                 
                     break;
 
                 default:
