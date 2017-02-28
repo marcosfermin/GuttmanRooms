@@ -9,30 +9,28 @@
         }
     </style>
 </asp:Content>
-
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="login-page">
         <div class="container-fluid">
             <div class="form">
                 <div class="logo">
                     <center>  
-            <img class="img-responsive" src="img/guttman_logo_leftbar_top.png" alt="Guttman Logo"/>
+            <img class="img-responsive" src="img/guttman_logo_login.png" width="250" alt="Guttman Logo"/>
             </center>
+                    <p></p>
                 </div>
                 <div class="login-form">
                     <asp:TextBox ID="txtUsername" placeholder="Username" runat="server" />
                     <asp:TextBox ID="txtPassword" placeholder="Password" runat="server" TextMode="Password" />
-                    <asp:Button Text="LOGIN" runat="server" ID="loginbutton" CausesValidation="true" OnClick="loginbutton_Click" />
+                    <asp:Button Text="LOGIN" CssClass="button" Font-Bold="true" runat="server" ID="loginbutton" BackColor="#005DAA" ForeColor="White" CausesValidation="true" OnClick="loginbutton_Click" />
                 </div>
                 <asp:RequiredFieldValidator runat="server" ID="usrValidator"
-                     Display="Dynamic" ControlToValidate="txtUsername"
-                    ErrorMessage="User ID is required." ForeColor="Red"> 
-                </asp:RequiredFieldValidator>
+                    Display="Dynamic" ControlToValidate="txtUsername"
+                    ErrorMessage="User ID is required." ForeColor="Red"> </asp:RequiredFieldValidator>
                 <asp:RequiredFieldValidator runat="server" ID="pwdValidator"
                     ControlToValidate="txtPassword" Display="Dynamic"
-                    ErrorMessage="Password is required." ForeColor="Red"> 
-                </asp:RequiredFieldValidator>
-                <asp:CustomValidator ID="ADValidator" runat="server" ControlToValidate="txtPassword" 
+                    ErrorMessage="Password is required." ForeColor="Red"> </asp:RequiredFieldValidator>
+                <asp:CustomValidator ID="ADValidator" runat="server" ControlToValidate="txtPassword"
                     Display="Dynamic" ErrorMessage="Login Failure" ForeColor="Red" OnServerValidate="ADValidator_ServerValidate"></asp:CustomValidator>
             </div>
         </div>

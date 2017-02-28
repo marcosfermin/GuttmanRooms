@@ -99,6 +99,7 @@
     <Content Include="Content\gvstyle.css" />
     <Content Include="img\favicon.ico" />
     <Content Include="img\guttman_logo_leftbar_top.png" />
+    <Content Include="img\guttman_logo_login.png" />
     <Content Include="img\logout.png" />
     <Content Include="Login.aspx" />
     <Content Include="login\style.css" />

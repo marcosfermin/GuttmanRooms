@@ -10,8 +10,8 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
         <%--CSS Stylesheet (Bootstrap)--%>
         <link href="Content/bootstrap.css" rel="stylesheet" />
-         <%--CSS stylesheet for the login form only--%>
-        <link rel="stylesheet" type="text/css" href="login/style.css"/>
+        <%--CSS stylesheet for the login form only--%>
+        <link rel="stylesheet" type="text/css" href="login/style.css" />
         <style type="text/css">
             .auto-style1 {
                 color: #005DAA;
@@ -21,11 +21,10 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
     </form>
 </body>
 </html>

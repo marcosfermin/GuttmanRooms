@@ -4,18 +4,38 @@
 This is the CSS Stylesheet of the GridView of the application's front-end (default.aspx)   
 */
 
-.grid{ border-collapse:collapse;text-align:center;}
+.grid {
+    border-collapse: collapse;
+    text-align: center;
+}
 
-.grid td{padding:10px ;border:1px solid #c1c1c1;color:#444;font-size:1em;}
+    .grid td {
+        padding: 10px;
+        border: 1px solid #c1c1c1;
+        color: #444;
+        font-size: 1em;
+    }
 
-.grid th{padding:4px 2px ; color:#707083; text-shadow:1px 1px 0px #ffffff;
+    .grid th {
+        padding: 4px 2px;
+        color: #707083;
+        text-shadow: 1px 1px 0px #ffffff;
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(0,#e5e5e9), color-stop(1,#fbfbfc));
+        border: 1px solid #c1c1c1;
+        font-size: 1em;
+        text-align: center;
+    }
 
-         background: -webkit-gradient(linear, left bottom, left top, color-stop(0,#e5e5e9), color-stop(1,#fbfbfc));
+        .grid th a {
+            color: white;
+            text-decoration: none;
+        }
 
-         border:1px solid #c1c1c1;font-size:1em;text-align:center }
+            .grid th a:hover {
+                color: #444;
+                text-decoration: none;
+            }
 
-.grid th a{color:white; text-decoration:none ; }
-
-.grid th a:hover{color:#444;text-decoration:none ;}
-
-.gvoutside {padding: 0px 1cm 0px 1cm;}
+.gvoutside {
+    padding: 0px 1cm 0px 1cm;
+}
