@@ -9,6 +9,16 @@
         }
     </style>
 
+<%--This JavaScript function adds the hover effect to the login button--%>
+    <script type="text/javascript">
+        function OnHover(val) {
+            val.style.backgroundColor = "Blue";
+        }
+        function OnOut(val) {
+            val.style.backgroundColor = "#005DAA";
+        }
+    </script>
+  
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="login-page">
@@ -23,9 +33,8 @@
                 <div class="login-form">
                     <asp:TextBox ID="txtUsername" placeholder="Username" runat="server" />
                     <asp:TextBox ID="txtPassword" placeholder="Password" runat="server" TextMode="Password" />
-                    <asp:Button Text="LOGIN" runat="server" ID="loginbutton"
-                        BackColor="#005DAA" ForeColor="White" Font-Bold="true"
-                        CausesValidation="true" OnClick="loginbutton_Click" />
+                    <asp:Button Text="LOG IN" runat="server" ID="loginbutton"
+                        CausesValidation="true" OnClick="loginbutton_Click" onmouseover="OnHover(this);" onmouseout="OnOut(this);" BackColor="#005DAA" ForeColor="White" Font-Bold="true" />
                 </div>
                 <asp:RequiredFieldValidator runat="server" ID="usrValidator"
                     Display="Dynamic" ControlToValidate="txtUsername"
