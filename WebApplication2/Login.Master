@@ -6,7 +6,7 @@
 <head runat="server">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
 
-    <title></title>
+    <title>Log in - Guttman Rooms</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
         <%--CSS Stylesheet (Bootstrap)--%>
         <link href="Content/bootstrap.css" rel="stylesheet" />

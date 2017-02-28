@@ -8,6 +8,7 @@
             text-align: center;
         }
     </style>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="login-page">
@@ -22,7 +23,9 @@
                 <div class="login-form">
                     <asp:TextBox ID="txtUsername" placeholder="Username" runat="server" />
                     <asp:TextBox ID="txtPassword" placeholder="Password" runat="server" TextMode="Password" />
-                    <asp:Button Text="LOGIN" CssClass="button" Font-Bold="true" runat="server" ID="loginbutton" BackColor="#005DAA" ForeColor="White" CausesValidation="true" OnClick="loginbutton_Click" />
+                    <asp:Button Text="LOGIN" runat="server" ID="loginbutton"
+                        BackColor="#005DAA" ForeColor="White" Font-Bold="true"
+                        CausesValidation="true" OnClick="loginbutton_Click" />
                 </div>
                 <asp:RequiredFieldValidator runat="server" ID="usrValidator"
                     Display="Dynamic" ControlToValidate="txtUsername"
