@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Guttman Rooms</title>
+    <title>Reserve Room - Guttman Rooms</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
     <meta http-equiv="refresh" content="30" />
     <asp:ContentPlaceHolder ID="head" runat="server">
