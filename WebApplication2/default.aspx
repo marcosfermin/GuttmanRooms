@@ -10,10 +10,9 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <center>
-        <h1 class="auto-style1">Reserve a Room</h1>
+        <h2 class="auto-style1">Reserve Room</h2>
     <br />
     </center>
-
     <%-- GridView of the Data --%>
     <div class="gvoutside">
         <asp:GridView ID="gvtwo" runat="server" CssClass="table table-responsive grid" AutoGenerateColumns="False"

@@ -9,7 +9,7 @@
         }
     </style>
 
-<%--This JavaScript function adds the hover effect to the login button--%>
+    <%--This JavaScript function adds the hover effect to the login button--%>
     <script type="text/javascript">
         function OnHover(val) {
             val.style.backgroundColor = "Blue";
@@ -18,7 +18,7 @@
             val.style.backgroundColor = "#005DAA";
         }
     </script>
-  
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="login-page">

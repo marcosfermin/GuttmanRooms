@@ -15,7 +15,7 @@ namespace WebApplication2.QMRServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Room", Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Room", Namespace="https://qmr.guttman.cuny.edu/")]
     [System.SerializableAttribute()]
     public partial class Room : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -89,61 +89,61 @@ namespace WebApplication2.QMRServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="QMRServiceReference.qmrserviceSoap")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="https://qmr.guttman.cuny.edu/", ConfigurationName="QMRServiceReference.qmrserviceSoap")]
     public interface qmrserviceSoap {
         
-        // CODEGEN: Generating message contract since element name GetRoomByRoomIDResult from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetRoomByRoomID", ReplyAction="*")]
+        // CODEGEN: Generating message contract since element name GetRoomByRoomIDResult from namespace https://qmr.guttman.cuny.edu/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="https://qmr.guttman.cuny.edu/GetRoomByRoomID", ReplyAction="*")]
         WebApplication2.QMRServiceReference.GetRoomByRoomIDResponse GetRoomByRoomID(WebApplication2.QMRServiceReference.GetRoomByRoomIDRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetRoomByRoomID", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://qmr.guttman.cuny.edu/GetRoomByRoomID", ReplyAction="*")]
         System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.GetRoomByRoomIDResponse> GetRoomByRoomIDAsync(WebApplication2.QMRServiceReference.GetRoomByRoomIDRequest request);
         
-        // CODEGEN: Generating message contract since element name GetRoomBySensorIDResult from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetRoomBySensorID", ReplyAction="*")]
+        // CODEGEN: Generating message contract since element name GetRoomBySensorIDResult from namespace https://qmr.guttman.cuny.edu/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="https://qmr.guttman.cuny.edu/GetRoomBySensorID", ReplyAction="*")]
         WebApplication2.QMRServiceReference.GetRoomBySensorIDResponse GetRoomBySensorID(WebApplication2.QMRServiceReference.GetRoomBySensorIDRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetRoomBySensorID", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://qmr.guttman.cuny.edu/GetRoomBySensorID", ReplyAction="*")]
         System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.GetRoomBySensorIDResponse> GetRoomBySensorIDAsync(WebApplication2.QMRServiceReference.GetRoomBySensorIDRequest request);
         
-        // CODEGEN: Generating message contract since element name GetListRoomsResult from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListRooms", ReplyAction="*")]
+        // CODEGEN: Generating message contract since element name GetListRoomsResult from namespace https://qmr.guttman.cuny.edu/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="https://qmr.guttman.cuny.edu/GetListRooms", ReplyAction="*")]
         WebApplication2.QMRServiceReference.GetListRoomsResponse GetListRooms(WebApplication2.QMRServiceReference.GetListRoomsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListRooms", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://qmr.guttman.cuny.edu/GetListRooms", ReplyAction="*")]
         System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.GetListRoomsResponse> GetListRoomsAsync(WebApplication2.QMRServiceReference.GetListRoomsRequest request);
         
-        // CODEGEN: Generating message contract since element name roomName from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddRoom", ReplyAction="*")]
+        // CODEGEN: Generating message contract since element name roomName from namespace https://qmr.guttman.cuny.edu/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="https://qmr.guttman.cuny.edu/AddRoom", ReplyAction="*")]
         WebApplication2.QMRServiceReference.AddRoomResponse AddRoom(WebApplication2.QMRServiceReference.AddRoomRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddRoom", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://qmr.guttman.cuny.edu/AddRoom", ReplyAction="*")]
         System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.AddRoomResponse> AddRoomAsync(WebApplication2.QMRServiceReference.AddRoomRequest request);
         
-        // CODEGEN: Generating message contract since element name ipaddr from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddSensor", ReplyAction="*")]
+        // CODEGEN: Generating message contract since element name ipaddr from namespace https://qmr.guttman.cuny.edu/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="https://qmr.guttman.cuny.edu/AddSensor", ReplyAction="*")]
         WebApplication2.QMRServiceReference.AddSensorResponse AddSensor(WebApplication2.QMRServiceReference.AddSensorRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddSensor", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://qmr.guttman.cuny.edu/AddSensor", ReplyAction="*")]
         System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.AddSensorResponse> AddSensorAsync(WebApplication2.QMRServiceReference.AddSensorRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ReserveRoom", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://qmr.guttman.cuny.edu/ReserveRoom", ReplyAction="*")]
         void ReserveRoom(int roomID, bool occupied);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ReserveRoom", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://qmr.guttman.cuny.edu/ReserveRoom", ReplyAction="*")]
         System.Threading.Tasks.Task ReserveRoomAsync(int roomID, bool occupied);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ReserveRoomBySensor", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://qmr.guttman.cuny.edu/ReserveRoomBySensor", ReplyAction="*")]
         void ReserveRoomBySensor(int sensorID, int roomID, bool occupied);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ReserveRoomBySensor", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://qmr.guttman.cuny.edu/ReserveRoomBySensor", ReplyAction="*")]
         System.Threading.Tasks.Task ReserveRoomBySensorAsync(int sensorID, int roomID, bool occupied);
         
-        // CODEGEN: Generating message contract since element name username from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Login", ReplyAction="*")]
+        // CODEGEN: Generating message contract since element name username from namespace https://qmr.guttman.cuny.edu/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="https://qmr.guttman.cuny.edu/Login", ReplyAction="*")]
         WebApplication2.QMRServiceReference.LoginResponse Login(WebApplication2.QMRServiceReference.LoginRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Login", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://qmr.guttman.cuny.edu/Login", ReplyAction="*")]
         System.Threading.Tasks.Task<WebApplication2.QMRServiceReference.LoginResponse> LoginAsync(WebApplication2.QMRServiceReference.LoginRequest request);
     }
     
@@ -153,7 +153,7 @@ namespace WebApplication2.QMRServiceReference {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetRoomByRoomIDRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetRoomByRoomID", Namespace="http://tempuri.org/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetRoomByRoomID", Namespace="https://qmr.guttman.cuny.edu/", Order=0)]
         public WebApplication2.QMRServiceReference.GetRoomByRoomIDRequestBody Body;
         
         public GetRoomByRoomIDRequest() {
@@ -167,7 +167,7 @@ namespace WebApplication2.QMRServiceReference {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="https://qmr.guttman.cuny.edu/")]
     public partial class GetRoomByRoomIDRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
@@ -187,7 +187,7 @@ namespace WebApplication2.QMRServiceReference {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetRoomByRoomIDResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetRoomByRoomIDResponse", Namespace="http://tempuri.org/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetRoomByRoomIDResponse", Namespace="https://qmr.guttman.cuny.edu/", Order=0)]
         public WebApplication2.QMRServiceReference.GetRoomByRoomIDResponseBody Body;
         
         public GetRoomByRoomIDResponse() {
@@ -201,7 +201,7 @@ namespace WebApplication2.QMRServiceReference {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="https://qmr.guttman.cuny.edu/")]
     public partial class GetRoomByRoomIDResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
@@ -221,7 +221,7 @@ namespace WebApplication2.QMRServiceReference {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetRoomBySensorIDRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetRoomBySensorID", Namespace="http://tempuri.org/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetRoomBySensorID", Namespace="https://qmr.guttman.cuny.edu/", Order=0)]
         public WebApplication2.QMRServiceReference.GetRoomBySensorIDRequestBody Body;
         
         public GetRoomBySensorIDRequest() {
@@ -235,7 +235,7 @@ namespace WebApplication2.QMRServiceReference {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="https://qmr.guttman.cuny.edu/")]
     public partial class GetRoomBySensorIDRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
@@ -255,7 +255,7 @@ namespace WebApplication2.QMRServiceReference {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetRoomBySensorIDResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetRoomBySensorIDResponse", Namespace="http://tempuri.org/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetRoomBySensorIDResponse", Namespace="https://qmr.guttman.cuny.edu/", Order=0)]
         public WebApplication2.QMRServiceReference.GetRoomBySensorIDResponseBody Body;
         
         public GetRoomBySensorIDResponse() {
@@ -269,7 +269,7 @@ namespace WebApplication2.QMRServiceReference {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="https://qmr.guttman.cuny.edu/")]
     public partial class GetRoomBySensorIDResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
@@ -289,7 +289,7 @@ namespace WebApplication2.QMRServiceReference {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetListRoomsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetListRooms", Namespace="http://tempuri.org/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetListRooms", Namespace="https://qmr.guttman.cuny.edu/", Order=0)]
         public WebApplication2.QMRServiceReference.GetListRoomsRequestBody Body;
         
         public GetListRoomsRequest() {
@@ -316,7 +316,7 @@ namespace WebApplication2.QMRServiceReference {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetListRoomsResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetListRoomsResponse", Namespace="http://tempuri.org/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetListRoomsResponse", Namespace="https://qmr.guttman.cuny.edu/", Order=0)]
         public WebApplication2.QMRServiceReference.GetListRoomsResponseBody Body;
         
         public GetListRoomsResponse() {
@@ -330,7 +330,7 @@ namespace WebApplication2.QMRServiceReference {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="https://qmr.guttman.cuny.edu/")]
     public partial class GetListRoomsResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
@@ -350,7 +350,7 @@ namespace WebApplication2.QMRServiceReference {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class AddRoomRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddRoom", Namespace="http://tempuri.org/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddRoom", Namespace="https://qmr.guttman.cuny.edu/", Order=0)]
         public WebApplication2.QMRServiceReference.AddRoomRequestBody Body;
         
         public AddRoomRequest() {
@@ -364,7 +364,7 @@ namespace WebApplication2.QMRServiceReference {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="https://qmr.guttman.cuny.edu/")]
     public partial class AddRoomRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
@@ -384,7 +384,7 @@ namespace WebApplication2.QMRServiceReference {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class AddRoomResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddRoomResponse", Namespace="http://tempuri.org/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddRoomResponse", Namespace="https://qmr.guttman.cuny.edu/", Order=0)]
         public WebApplication2.QMRServiceReference.AddRoomResponseBody Body;
         
         public AddRoomResponse() {
@@ -411,7 +411,7 @@ namespace WebApplication2.QMRServiceReference {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class AddSensorRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddSensor", Namespace="http://tempuri.org/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddSensor", Namespace="https://qmr.guttman.cuny.edu/", Order=0)]
         public WebApplication2.QMRServiceReference.AddSensorRequestBody Body;
         
         public AddSensorRequest() {
@@ -425,7 +425,7 @@ namespace WebApplication2.QMRServiceReference {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="https://qmr.guttman.cuny.edu/")]
     public partial class AddSensorRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
@@ -449,7 +449,7 @@ namespace WebApplication2.QMRServiceReference {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class AddSensorResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddSensorResponse", Namespace="http://tempuri.org/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddSensorResponse", Namespace="https://qmr.guttman.cuny.edu/", Order=0)]
         public WebApplication2.QMRServiceReference.AddSensorResponseBody Body;
         
         public AddSensorResponse() {
@@ -476,7 +476,7 @@ namespace WebApplication2.QMRServiceReference {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class LoginRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="Login", Namespace="http://tempuri.org/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="Login", Namespace="https://qmr.guttman.cuny.edu/", Order=0)]
         public WebApplication2.QMRServiceReference.LoginRequestBody Body;
         
         public LoginRequest() {
@@ -490,7 +490,7 @@ namespace WebApplication2.QMRServiceReference {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="https://qmr.guttman.cuny.edu/")]
     public partial class LoginRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
@@ -514,7 +514,7 @@ namespace WebApplication2.QMRServiceReference {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class LoginResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="LoginResponse", Namespace="http://tempuri.org/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="LoginResponse", Namespace="https://qmr.guttman.cuny.edu/", Order=0)]
         public WebApplication2.QMRServiceReference.LoginResponseBody Body;
         
         public LoginResponse() {
@@ -528,7 +528,7 @@ namespace WebApplication2.QMRServiceReference {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="https://qmr.guttman.cuny.edu/")]
     public partial class LoginResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]

@@ -23,9 +23,7 @@ namespace WebApplication2
             {
                 Session.Add("user", txtUsername.Text);
                 Response.Redirect("~/default.aspx", true);
-
             }
-
         }
 
         protected void ADValidator_ServerValidate(object source, ServerValidateEventArgs args)
