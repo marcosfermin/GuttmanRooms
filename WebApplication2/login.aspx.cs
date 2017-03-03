@@ -16,9 +16,13 @@ namespace WebApplication2
         }
         protected void loginbutton_Click(object sender, EventArgs e)
         {
+            // Call to the Web Service
             QMRServiceReference.qmrserviceSoapClient client = new QMRServiceReference.qmrserviceSoapClient();
 
+            // Obtain credentials from TextBoxes (txtUsername.Text and txtPassword.Text) from Default Page. 
             string loginSuccess = client.Login(txtUsername.Text, txtPassword.Text);
+            
+            // If Authentication is successful, user will be redirected to the Default Page.
             if (loginSuccess == "Success")
             {
                 Session.Add("user", txtUsername.Text);
@@ -26,11 +30,18 @@ namespace WebApplication2
             }
         }
 
+        // Validation of the Active Directory: 
+
         protected void ADValidator_ServerValidate(object source, ServerValidateEventArgs args)
         {
+            // Call to the Web Service
             QMRServiceReference.qmrserviceSoapClient client = new QMRServiceReference.qmrserviceSoapClient();
 
+            // Obtain credentials from TextBoxes (txtUsername.Text and txtPassword.Text) from Default Page (default.aspx). 
             string loginSuccess = client.Login(txtUsername.Text, txtPassword.Text);
+
+            // Validation based on username
+            // If the Authentication is successful and the validation arguments are true, user will be redirected to the Default Page (default.aspx) 
             if (loginSuccess == "Success")
             {
                 args.IsValid = true;
